@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ISO/IEC 9126 | Bloco 4 - Softwares Auxiliares</title>
+  
+  <!-- Fontes Google: Inter para textos limpos e Fira Code / JetBrains Mono para o estilo developer -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="nord-theme" data-prev-href="bloco3.html" data-timer-limit="15" data-next-label="Ir para o Bloco 5" data-next-href="bloco5.html">
+
+  <!-- Barra de Progresso Superior -->
+  <div class="progress-bar-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- Cabeçalho de Status da Apresentação -->
+  <header class="presentation-header">
+    <div class="header-left">
+      <div class="tech-badge">
+        <span class="pulse-dot"></span>
+        <span class="mono">CEULP/ULBRA • ENGENHARIA DE SOFTWARE</span>
+      </div>
+      <span class="block-indicator">BLOCO 04: SOFTWARES AUXILIARES NA PRÁTICA</span>
+    </div>
+    <div class="header-right">
+      <div class="timer-widget" id="timerWidget" title="Clique para zerar o cronômetro">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        <span class="mono" id="blockTimer">00:00</span>
+      </div>
+      <button class="icon-btn" id="btnHelp" title="Atalhos do Teclado (?)">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+          <line x1="12" y1="17" x2="12.01" y2="17"></line>
+        </svg>
+      </button>
+      <button class="icon-btn" id="btnFullscreen" title="Tela Cheia (F)">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Container de Slides -->
+  <main class="presentation-viewport">
+
+    <section class="slide active" data-slide="1" id="slide-1" data-title="4.1: O que é o SonarQube?">
+      <div class="slide-content">
+        <div class="slide-top-header">
+          <div class="section-tag mono"><span class="accent-dot"></span> 04.1 // O QUE É O SONARQUBE?</div>
+          <h2 class="slide-heading slim">SonarQube: <span class="gradient-text">inspeção contínua da qualidade do código</span></h2>
+          <p class="slide-lead tight">Plataforma da <strong>SonarSource</strong> (com edição Community gratuita) que faz <strong>análise estática</strong> do código-fonte, sem executá-lo, e aponta problemas antes que virem falhas em produção.</p>
+        </div>
+        <div class="tool-pipeline">
+          <div class="tp-node"><span class="tp-ic">💻</span><strong>Código-fonte</strong><span class="mono">dezenas de linguagens</span></div>
+          <div class="metric-arrow">➜</div>
+          <div class="tp-node"><span class="tp-ic">🔎</span><strong>Scanner</strong><span class="mono">analisa a cada commit / CI</span></div>
+          <div class="metric-arrow">➜</div>
+          <div class="tp-node"><span class="tp-ic">🗄️</span><strong>Servidor SonarQube</strong><span class="mono">guarda histórico</span></div>
+          <div class="metric-arrow">➜</div>
+          <div class="tp-node"><span class="tp-ic">🚦</span><strong>Quality Gate</strong><span class="mono">aprovado / reprovado</span></div>
+        </div>
+        <div class="tool-cards">
+          <div class="tool-card c-aurora"><span class="tc-ic">🐞</span><h4>Bugs</h4><p>Erros que podem quebrar o sistema.</p><span class="tc-iso mono">→ Confiabilidade</span></div>
+          <div class="tool-card c-frost"><span class="tc-ic">🔓</span><h4>Vulnerabilidades</h4><p>Brechas de segurança exploráveis.</p><span class="tc-iso mono">→ Segurança</span></div>
+          <div class="tool-card c-purple"><span class="tc-ic">👃</span><h4>Code Smells</h4><p>Código confuso, difícil de manter. Gera <strong>dívida técnica</strong>.</p><span class="tc-iso mono">→ Manutenibilidade</span></div>
+          <div class="tool-card c-teal"><span class="tc-ic">📋</span><h4>Cobertura &amp; Duplicação</h4><p>Quanto do código é testado e quanto é copiado.</p><span class="tc-iso mono">→ Testabilidade</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="2" id="slide-2" data-title="4.2: SonarQube (Métricas Internas &amp; Manutenibilidade)">
+      <div class="slide-content tool-layout">
+        <div class="tool-shot shot-portrait">
+          <div class="tool-window">
+            <div class="card-bar"><span class="mono card-title">🔍 sonarqube • Executive Report</span><span class="badge-lang mono">WEBGOAT</span></div>
+            <img class="zoomable" src="assets/images/sonarcube_report.png" alt="Relatório executivo do SonarQube para o projeto WebGoat" title="Clique para ampliar">
+          </div>
+          <span class="shot-hint mono">🔎 clique para ampliar • imagem de exemplo da internet, usada só para explicar as métricas</span>
+        </div>
+        <div class="tool-info">
+          <div class="section-tag mono"><span class="accent-dot"></span> 04.2 // SONARQUBE • MÉTRICAS INTERNAS</div>
+          <h2 class="slide-heading slim">Radiografia do código: <span class="gradient-text">Code Smells &amp; Dívida Técnica</span></h2>
+          <p class="slide-lead tight">Análise estática de <strong>12.009 linhas</strong> do projeto WebGoat, ligada à <strong>Manutenibilidade</strong> da ISO 9126.</p>
+          <div class="kpi-grid">
+            <div class="kpi"><span class="kpi-num mono warn" data-count="595">0</span><span class="kpi-label">Code Smells</span></div>
+            <div class="kpi"><span class="kpi-num mono ok">0,8%</span><span class="kpi-label">Dívida técnica (debt ratio)</span></div>
+            <div class="kpi"><span class="kpi-num mono bad" data-count="23">0</span><span class="kpi-label">Bugs (Confiabilidade E)</span></div>
+            <div class="kpi"><span class="kpi-num mono bad" data-count="42">0</span><span class="kpi-label">Vulnerabilidades (Segurança E)</span></div>
+          </div>
+          <div class="gate-row">
+            <span class="gate-badge mono">QUALITY GATE: FAILED</span>
+            <span class="gate-text">Manutenibilidade <strong class="ok">A</strong>, mas Confiabilidade e Segurança <strong class="bad">E</strong>: <em>uma nota boa não esconde as ruins.</em></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="3" id="slide-3" data-title="4.3: PRÁTICA: SonarQube ao vivo">
+      <div class="slide-content practice-layout">
+        <div class="practice-glow"></div>
+        <span class="practice-tag mono"><span class="prompt-sym">&gt;</span> sonar-scanner --live-demo<span class="blink">_</span></span>
+        <h1 class="practice-title">PRÁTICA</h1>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="4" id="slide-4" data-title="4.4: O que é o TestLink? (ferramenta legada)">
+      <div class="slide-content">
+        <div class="slide-top-header">
+          <div class="section-tag mono"><span class="accent-dot"></span> 04.4 // O QUE É O TESTLINK?</div>
+          <h2 class="slide-heading slim">TestLink: <span class="gradient-text">gestão de testes de software</span></h2>
+          <p class="slide-lead tight">Sistema web <strong>open source</strong> para organizar o trabalho de teste: planeja, executa e registra resultados, base das <strong>métricas externas</strong>.</p>
+        </div>
+        <div class="tl-grid">
+          <div class="tool-cards tl-feats">
+            <div class="tool-card c-blue"><span class="tc-ic">📁</span><h4>Casos &amp; Suítes</h4><p>Especificação organizada em árvore de testes.</p></div>
+            <div class="tool-card c-teal"><span class="tc-ic">🗓️</span><h4>Planos &amp; Builds</h4><p>Define o que testar em cada versão.</p></div>
+            <div class="tool-card c-green"><span class="tc-ic">▶️</span><h4>Execução</h4><p>Registra sucesso, falha ou bloqueio de cada caso.</p></div>
+            <div class="tool-card c-frost"><span class="tc-ic">📈</span><h4>Relatórios</h4><p>Métricas de cobertura e taxa de falhas, com rastreio de requisitos.</p></div>
+          </div>
+          <div class="legacy-card">
+            <span class="legacy-badge mono">⚠️ FERRAMENTA LEGADA</span>
+            <h3>Antiga e <span class="gradient-text-danger">sem novas atualizações</span></h3>
+            <p>O projeto <strong>não recebe mais atualizações</strong>: a interface é datada e não há novos recursos nem correções recentes.</p>
+            <ul class="legacy-list">
+              <li>✔ Ainda útil para <strong>entender os conceitos</strong> de gestão de testes.</li>
+              <li>✘ Pouco indicada para projetos novos em produção.</li>
+              <li>➜ Alternativas modernas: <strong>Xray, Zephyr, TestRail, Kiwi TCMS</strong>.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="5" id="slide-5" data-title="4.5: TestLink (Métricas Externas &amp; Confiabilidade)">
+      <div class="slide-content tool-layout wide">
+        <div class="tool-info">
+          <div class="section-tag mono"><span class="accent-dot"></span> 04.5 // TESTLINK • MÉTRICAS EXTERNAS</div>
+          <h2 class="slide-heading slim">Gestão de testes: <span class="gradient-text">sucessos e falhas</span> em execução</h2>
+          <p class="slide-lead tight">Planeja casos de teste, registra execuções e gera relatórios, base das métricas de <strong>Confiabilidade</strong>.</p>
+          <div class="test-tree mono">
+            <div class="tt-title">📁 Portal Acadêmico <span class="tt-sum">6 casos • 4 ✔ • 2 ✘ <em>(exemplo)</em></span></div>
+            <div class="tt-item pass">├─ ✔ TC-01 Login com credenciais válidas</div>
+            <div class="tt-item pass">├─ ✔ TC-02 Consulta de boletim</div>
+            <div class="tt-item fail">├─ ✘ TC-03 Envio de trabalho (timeout)</div>
+            <div class="tt-item pass">├─ ✔ TC-04 Recuperação de senha</div>
+            <div class="tt-item pass">├─ ✔ TC-05 Download de histórico</div>
+            <div class="tt-item fail">└─ ✘ TC-06 Carga de 500 usuários</div>
+            <div class="tt-bar"><div class="tt-pass" style="width:66%"></div><div class="tt-fail" style="width:34%"></div></div>
+          </div>
+        </div>
+        <div class="tool-shot">
+          <div class="tool-window">
+            <div class="card-bar"><span class="mono card-title">🧪 TestLink 1.9.4 • Test Execution</span><span class="badge-lang mono">DASHBOARD</span></div>
+            <img class="zoomable" src="assets/images/testlink.jpeg" alt="Tela inicial do TestLink 1.9.4" title="Clique para ampliar">
+          </div>
+          <div class="shot-tags">
+            <span class="tag-chip">Execute Tests</span><span class="tag-chip">Test Reports and Metrics</span><span class="tag-chip">Metrics Dashboard</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="6" id="slide-6" data-title="4.6: Checklist de Usabilidade (Interativo)">
+      <div class="slide-content">
+        <div class="slide-top-header">
+          <div class="section-tag mono"><span class="accent-dot"></span> 04.6 // CHECKLIST • QUALIDADE EM USO • INTERATIVO</div>
+          <h2 class="slide-heading slim">Avaliando <span class="gradient-text">ao vivo</span> com a turma</h2>
+          <p class="slide-lead tight">Sistema avaliado: <input id="chkSystem" class="chk-input mono" value="Portal Acadêmico" aria-label="Nome do sistema avaliado"> Respondam <strong>Sim</strong> ou <strong>Não</strong> a cada critério de Usabilidade.</p>
+        </div>
+        <div class="chk-layout">
+          <div class="chk-list" id="chkList">
+            <div class="chk-item" data-answer="">
+              <div class="chk-text"><span class="chk-sub mono">01 • Inteligibilidade</span><span class="chk-q">É fácil entender para que serve o sistema logo na primeira tela?</span></div>
+              <div class="chk-actions"><button class="chk-btn yes" data-val="yes">Sim</button><button class="chk-btn no" data-val="no">Não</button></div>
+            </div>
+            <div class="chk-item" data-answer="">
+              <div class="chk-text"><span class="chk-sub mono">02 • Apreensibilidade</span><span class="chk-q">Um usuário novo aprende a usar sem precisar de treinamento?</span></div>
+              <div class="chk-actions"><button class="chk-btn yes" data-val="yes">Sim</button><button class="chk-btn no" data-val="no">Não</button></div>
+            </div>
+            <div class="chk-item" data-answer="">
+              <div class="chk-text"><span class="chk-sub mono">03 • Operacionalidade</span><span class="chk-q">As tarefas principais são concluídas em poucos cliques?</span></div>
+              <div class="chk-actions"><button class="chk-btn yes" data-val="yes">Sim</button><button class="chk-btn no" data-val="no">Não</button></div>
+            </div>
+            <div class="chk-item" data-answer="">
+              <div class="chk-text"><span class="chk-sub mono">04 • Proteção frente a erros</span><span class="chk-q">O sistema pede confirmação antes de ações destrutivas?</span></div>
+              <div class="chk-actions"><button class="chk-btn yes" data-val="yes">Sim</button><button class="chk-btn no" data-val="no">Não</button></div>
+            </div>
+            <div class="chk-item" data-answer="">
+              <div class="chk-text"><span class="chk-sub mono">05 • Estética / Atratividade</span><span class="chk-q">A interface é visualmente agradável e consistente?</span></div>
+              <div class="chk-actions"><button class="chk-btn yes" data-val="yes">Sim</button><button class="chk-btn no" data-val="no">Não</button></div>
+            </div>
+            <div class="chk-item" data-answer="">
+              <div class="chk-text"><span class="chk-sub mono">06 • Acessibilidade</span><span class="chk-q">É possível usar com teclado e com bom contraste?</span></div>
+              <div class="chk-actions"><button class="chk-btn yes" data-val="yes">Sim</button><button class="chk-btn no" data-val="no">Não</button></div>
+            </div>
+          </div>
+          <aside class="chk-score">
+            <span class="sub-label mono">// RESULTADO AO VIVO</span>
+            <div class="chk-ring" id="chkRing"><span class="chk-pct mono" id="chkPct">0%</span></div>
+            <div class="chk-count mono"><span id="chkYes">0</span> sim • <span id="chkNo">0</span> não • <span id="chkLeft">6</span> pendentes</div>
+            <p class="chk-verdict" id="chkVerdict">Aguardando respostas…</p>
+            <button class="poll-button-reset chk-reset" id="chkReset">↺ Reiniciar checklist</button>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Barra de Controle Inferior -->
+  <footer class="presentation-footer">
+    <div class="footer-left">
+      <div class="slide-counter mono">
+        <span class="current-slide" id="currentSlideNum">01</span>
+        <span class="separator">/</span>
+        <span class="total-slides" id="totalSlidesNum">06</span>
+      </div>
+      <div class="slide-title-preview" id="slideTitlePreview">
+        4.1: SonarQube
+      </div>
+    </div>
+
+    <!-- Navegação de Slides em Miniatura (Dots) -->
+    <div class="slide-dots" id="slideDots">
+      <button class="dot-btn active" data-goto="1" title="4.1 O que é o SonarQube"></button>
+      <button class="dot-btn" data-goto="2" title="4.2 Relatório SonarQube"></button>
+      <button class="dot-btn" data-goto="3" title="4.3 PRÁTICA"></button>
+      <button class="dot-btn" data-goto="4" title="4.4 O que é o TestLink"></button>
+      <button class="dot-btn" data-goto="5" title="4.5 TestLink"></button>
+      <button class="dot-btn" data-goto="6" title="4.6 Checklist"></button>
+    </div>
+
+    <div class="footer-right">
+      <div class="nav-controls">
+        <button class="nav-btn" id="btnPrev" title="Slide Anterior (Seta Esquerda)">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+          <span class="btn-text">Anterior</span>
+        </button>
+        <button class="nav-btn primary" id="btnNext" title="Próximo Slide (Seta Direita / Espaço)">
+          <span class="btn-text">Avançar</span>
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal de Ajuda / Atalhos -->
+  <div class="modal-overlay" id="helpModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title mono">// ATALHOS DE TECLADO</h3>
+        <button class="modal-close" id="btnCloseHelp">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="shortcut-row">
+          <span class="keys"><kbd>→</kbd> ou <kbd>Espaço</kbd> ou <kbd>PageDown</kbd></span>
+          <span class="action">Próximo Slide</span>
+        </div>
+        <div class="shortcut-row">
+          <span class="keys"><kbd>←</kbd> ou <kbd>Backspace</kbd> ou <kbd>PageUp</kbd></span>
+          <span class="action">Slide Anterior</span>
+        </div>
+        <div class="shortcut-row">
+          <span class="keys"><kbd>F</kbd></span>
+          <span class="action">Alternar Modo Tela Cheia</span>
+        </div>
+        <div class="shortcut-row">
+          <span class="keys"><kbd>Home</kbd> / <kbd>End</kbd></span>
+          <span class="action">Primeiro / Último Slide</span>
+        </div>
+        <div class="shortcut-row">
+          <span class="keys"><kbd>T</kbd></span>
+          <span class="action">Zerar / Reiniciar Cronômetro</span>
+        </div>
+        <div class="shortcut-row">
+          <span class="keys"><kbd>?</kbd></span>
+          <span class="action">Abrir este painel de ajuda</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="img-lightbox" id="lightbox"><img id="lightboxImg" alt=""></div>
+
+  <script src="js/presentation.js"></script>
+</body>
+</html>

@@ -1,0 +1,1851 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ISO/IEC 9126 | Apresentação Interativa Completa (SPA)</title>
+  
+  <!-- Fontes Google: Inter e Fira Code -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="nord-theme" data-timer-limit="60">
+
+  <!-- Barra de Progresso Superior -->
+  <div class="progress-bar-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- Cabeçalho de Status da Apresentação -->
+  <header class="presentation-header">
+    <div class="header-left">
+      <div class="tech-badge">
+        <span class="pulse-dot"></span>
+        <span class="mono">CEULP/ULBRA</span>
+      </div>
+      <!-- Seletor Rápido de Blocos da SPA -->
+      <nav class="block-nav" id="blockNav">
+        <button class="block-nav-btn active" data-target-slide="1" title="Pular para o Bloco 1 (12 min)">B1: Introdução</button>
+        <button class="block-nav-btn" data-target-slide="8" title="Pular para o Bloco 2 (15 min)">B2: Modelo 9126-1</button>
+        <button class="block-nav-btn" data-target-slide="12" title="Pular para o Minigame: O Tribunal da Qualidade">⚖️ Tribunal</button>
+        <button class="block-nav-btn" data-target-slide="18" title="Pular para o Bloco 3 (10 min)">B3: As Métricas</button>
+        <button class="block-nav-btn" data-target-slide="22" title="Pular para o Bloco 4 (15 min)">B4: Ferramentas</button>
+        <button class="block-nav-btn" data-target-slide="27" title="Pular para o Bloco 5 (10 min)">B5: Batalha &amp; Q&amp;A</button>
+      </nav>
+      <span class="block-indicator" id="blockIndicator">BLOCO 01: INTRODUÇÃO &amp; CONTEXTUALIZAÇÃO</span>
+    </div>
+    <div class="header-right">
+      <div class="timer-widget" id="timerWidget" title="Clique para reiniciar o cronômetro">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        <span class="mono" id="blockTimer">00:00</span>
+      </div>
+      <button class="icon-btn" id="btnHelp" title="Atalhos do Teclado (?)">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+          <line x1="12" y1="17" x2="12.01" y2="17"></line>
+        </svg>
+      </button>
+      <button class="icon-btn" id="btnFullscreen" title="Tela Cheia (F)">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Container de Slides da SPA -->
+  <main class="presentation-viewport">
+
+    <!-- ========================================== -->
+    <!-- SLIDE 1.1: CAPA & PROPÓSITO                -->
+    <!-- ========================================== -->
+    <section class="slide active" data-slide="1" data-block="1" id="slide-1" data-title="1.1: Capa (Qualidade de Software)">
+      <div class="slide-content cover-layout">
+        <div class="background-decorations">
+          <div class="glow-orb orb-1"></div>
+          <div class="glow-orb orb-2"></div>
+          <div class="grid-overlay"></div>
+        </div>
+
+        <div class="cover-header">
+          <span class="terminal-tag mono">
+            <span class="prompt-sym">&gt;</span> iso_iec_9126::software_quality.init()
+          </span>
+          <span class="badge-accent">Normas &amp; Métricas de Qualidade</span>
+        </div>
+
+        <h1 class="cover-title">
+          Qualidade de Software:
+          <span class="gradient-text">Muito Além do Código Que Funciona.</span>
+        </h1>
+
+        <p class="cover-subtitle">
+          Uma imersão na norma <strong>ISO/IEC 9126</strong>, seus pilares arquiteturais e a ciência de medir o que realmente importa antes que o sistema falhe.
+        </p>
+
+        <div class="cover-footer">
+          <div class="team-card">
+            <div class="team-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <div class="team-info">
+              <span class="team-label">EQUIPE DE APRESENTAÇÃO</span>
+              <span class="team-names">Engenharia de Software • CEULP / ULBRA</span>
+            </div>
+          </div>
+
+          <div class="slide-meta-pills">
+            <span class="meta-pill mono">
+              <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              Bloco 1 (12 min)
+            </span>
+            <span class="meta-pill mono">
+              <kbd class="key-hint">→</kbd> ou <kbd class="key-hint">Espaço</kbd> para avançar
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========================================== -->
+    <!-- SLIDE 1.2: QUEBRA-GELO INTERATIVO          -->
+    <!-- ========================================== -->
+    <section class="slide" data-slide="2" data-block="1" id="slide-2" data-title="1.2: Quebra-Gelo (O Portal Acadêmico Caiu)">
+      <div class="slide-content split-layout">
+        <div class="slide-text-side">
+          <div class="section-tag mono">
+            <span class="accent-dot"></span> 01.2 // QUEBRA-GELO &amp; REALIDADE
+          </div>
+          <h2 class="slide-heading">
+            "Mas professor... <br>
+            <span class="gradient-text-warn">na minha máquina funcionava!"</span>
+          </h2>
+          <p class="slide-lead">
+            Pergunta rápida para a turma:
+          </p>
+          <div class="question-callout">
+            <p>
+              Quem aqui já tentou enviar um trabalho no portal acadêmico às <strong>23:58 do último dia de prazo</strong> e viu a tela girar infinitamente até cair?
+            </p>
+          </div>
+
+          <!-- Componente Interativo de Votação em Sala -->
+          <div class="interactive-poll-box">
+            <div class="poll-prompt">
+              <span>Levantem a mão ou cliquem no botão:</span>
+            </div>
+            <div class="poll-actions">
+              <button class="poll-button" id="btnVote">
+                <span class="poll-button-icon">🙋‍♂️</span>
+                <span class="poll-button-text">Já sofri com isso!</span>
+                <span class="poll-badge mono" id="voteCount">34</span>
+              </button>
+              <button class="poll-button-reset" id="btnResetVote" title="Zerar votos">↺</button>
+            </div>
+            <div class="poll-bar-wrapper">
+              <div class="poll-bar-fill" id="pollBarFill" style="width: 88%;"></div>
+            </div>
+            <span class="poll-caption mono">88% da turma já experimentou a falta de qualidade em momentos críticos</span>
+          </div>
+
+          <div class="insight-pill">
+            <span class="insight-icon">💡</span>
+            <div class="insight-text">
+              <strong>O Paradoxo:</strong> O software compila, passa nos testes unitários isolados, mas colapsa sob carga real e frustra 100% dos usuários.
+            </div>
+          </div>
+        </div>
+
+        <div class="slide-visual-side">
+          <!-- Mockup de Navegador com Erro de Sistema -->
+          <div class="browser-mockup">
+            <div class="browser-chrome">
+              <div class="browser-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <div class="browser-url-bar mono">
+                <span class="lock-icon">⚠️</span>
+                <span class="url-text">https://portal.universidade.edu.br/aluno/entrega-final</span>
+              </div>
+              <div class="browser-menu">⋮</div>
+            </div>
+
+            <div class="browser-viewport error-screen">
+              <div class="error-badge mono">HTTP 504 GATEWAY TIMEOUT</div>
+              <div class="error-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="server-crash-icon">
+                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                  <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                  <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                  <line x1="12" y1="10" x2="12" y2="14" stroke-dasharray="2 2"></line>
+                  <line x1="10" y1="12" x2="14" y2="12"></line>
+                </svg>
+              </div>
+              <h3 class="error-title">Serviço Temporariamente Indisponível</h3>
+              <p class="error-desc mono">
+                O servidor da aplicação não respondeu a tempo.<br>
+                A conexão com o pool de banco de dados esgotou (MaxConnections=150 excedido).
+              </p>
+
+              <div class="terminal-log-box mono">
+                <div class="log-line text-dim">[23:58:14.204] POST /api/submissions - 400 requests/sec</div>
+                <div class="log-line text-warn">[23:58:15.011] WARN: HikariPool-1 - Connection is not available</div>
+                <div class="log-line text-danger">[23:58:17.892] FATAL: Thread pool exhaustion. Latency &gt; 30.000ms</div>
+                <div class="log-line text-cursor">&gt; System halted waiting for GC...<span class="blink">_</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========================================== -->
+    <!-- SLIDE 1.3: O CUSTO DA FALHA (ARIANE 5)     -->
+    <!-- ========================================== -->
+    <section class="slide" data-slide="3" data-block="1" id="slide-3" data-title="1.3: O Custo da Falha (Ariane 5 - US$ 370M)">
+      <div class="slide-content">
+        <div class="slide-top-header">
+          <div class="section-tag mono">
+            <span class="accent-dot danger"></span> 01.3 // O IMPACTO REAL DA QUALIDADE
+          </div>
+          <h2 class="slide-heading slim">
+            O Custo da Falha: <span class="gradient-text-danger">37 Segundos e US$ 370 Milhões</span>
+          </h2>
+          <p class="slide-lead tight">
+            O caso histórico do <strong>Voo 501 do foguete Ariane 5</strong> (04/06/1996) — um dos desastres de software mais caros da história da computação.
+          </p>
+        </div>
+
+        <div class="ariane-integrated-grid">
+          <!-- Coluna 1: Imagem da Explosão e Prejuízo -->
+          <div class="ariane-media-card">
+            <div class="ariane-img-box">
+              <img class="zoomable" src="assets/images/Ariane_501_explosion.webp" alt="Explosão do voo 501 do foguete Ariane 5" title="Clique para ampliar">
+              <span class="ariane-img-stamp mono">04/06/1996 • VOO 501</span>
+            </div>
+            <div class="ariane-caption mono">
+              Destroços caindo após a autodestruição do voo 501 do Ariane, em 4 de junho de 1996.
+            </div>
+            <div class="ariane-loss-banner">
+              <span class="ariane-loss-label mono">PREJUÍZO DIRETO DE SOFTWARE</span>
+              <div class="ariane-loss-val gradient-text-danger">US$ 370M</div>
+              <span class="ariane-loss-sub">Destruição completa 37 segundos após a decolagem</span>
+            </div>
+          </div>
+
+          <!-- Coluna 2: Análise Técnica do Overflow e Timeline -->
+          <div class="code-analysis-card">
+            <div class="card-bar">
+              <span class="mono card-title">
+                <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+                ariane5_guidance.ada (Causa Raiz do Bug)
+              </span>
+              <span class="badge-lang mono">ADA-83</span>
+            </div>
+
+            <div class="code-snippet mono">
+              <div class="code-line"><span class="line-num">01</span> <span class="c-comment">-- Módulo reutilizado do Ariane 4 (cálculo de velocidade horizontal)</span></div>
+              <div class="code-line"><span class="line-num">02</span> <span class="c-type">declare</span></div>
+              <div class="code-line"><span class="line-num">03</span>   Horizontal_Bias_64 : <span class="c-type">Float_64</span>;  <span class="c-comment">-- Ariane 5 atingia trajetórias 5x mais rápidas!</span></div>
+              <div class="code-line"><span class="line-num">04</span>   Raw_Steering_16    : <span class="c-type">Integer_16</span>; <span class="c-comment">-- Intervalo máximo: -32.768 a +32.767</span></div>
+              <div class="code-line"><span class="line-num">05</span> <span class="c-type">begin</span></div>
+              <div class="code-line"><span class="line-num">06</span>   Horizontal_Bias_64 := Read_Inertial_Sensors(); <span class="c-comment">-- Valor retornado: 36.182,5</span></div>
+              <div class="code-line error-highlight"><span class="line-num">07</span>   Raw_Steering_16    := <span class="c-func">Integer_16</span>(Horizontal_Bias_64); <span class="c-boom">💥 OVERFLOW EXCEPTION!</span></div>
+              <div class="code-line"><span class="line-num">08</span>   <span class="c-comment">-- ⚠️ Proteção de overflow foi removida para "economizar CPU" no foguete anterior!</span></div>
+            </div>
+
+            <div class="takeaway-box">
+              <div class="takeaway-header mono">
+                <span class="takeaway-icon">🎯</span> LIÇÃO PARA A ENGENHARIA DE SOFTWARE
+              </div>
+              <p>
+                O código funcionava perfeitamente no Ariane 4, mas falhou catastroficamente em <strong>Portabilidade</strong>, <strong>Confiabilidade</strong> e <strong>Análise de Limites</strong>. Qualidade não é binária ("funciona ou não"): exige métricas rigorosas de limites e tolerância a falhas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========================================== -->
+    <!-- SLIDE 1.4: CONCEITO: MODELO DE QUALIDADE   -->
+    <!-- ========================================== -->
+    <section class="slide" data-slide="4" data-block="1" id="slide-4" data-title="1.4: O que é um 'Modelo de Qualidade'?">
+      <div class="slide-content">
+        <div class="slide-top-header">
+          <div class="section-tag mono">
+            <span class="accent-dot"></span> 01.4 // FUNDAMENTAÇÃO
+          </div>
+          <h2 class="slide-heading slim">
+            O que é um <span class="gradient-text">"Modelo de Qualidade"</span>?
+          </h2>
+          <p class="slide-lead tight">
+            Não basta dizer que o software é "bom". <strong>Afinal, o que é qualidade para cada um?</strong>
+          </p>
+        </div>
+
+        <div class="model-layout">
+          <div class="who-col">
+            <div class="who-card">
+              <span class="who-ic">👩‍💻</span>
+              <div>
+                <span class="mono who-role">DESENVOLVEDOR</span>
+                <strong>"Código limpo, sem débitos técnicos"</strong>
+              </div>
+            </div>
+
+            <div class="who-card">
+              <span class="who-ic">🧑‍💼</span>
+              <div>
+                <span class="mono who-role">CLIENTE / USUÁRIO</span>
+                <strong>"Interface intuitiva e tela bonita"</strong>
+              </div>
+            </div>
+
+            <div class="who-card">
+              <span class="who-ic">🏢</span>
+              <div>
+                <span class="mono who-role">EMPRESA / GESTÃO</span>
+                <strong>"Não cair e aguentar o Black Friday"</strong>
+              </div>
+            </div>
+
+            <div class="who-sol mono">
+              ➜ A ISO/IEC 9126 atua como um <strong>prisma padronizador</strong>: converte opiniões subjetivas em uma taxonomia objetiva e mensurável.
+            </div>
+          </div>
+
+          <div class="pyramid">
+            <div class="pyr-level pl-1">
+              <strong>Qualidade Geral do Software</strong>
+              <span class="mono">Conceito abstrato e global</span>
+            </div>
+            <div class="pyr-level pl-2">
+              <strong>6 Características Fundamentais</strong>
+              <span class="mono">Funcionalidade • Confiabilidade • Usabilidade • Eficiência • Manutenibilidade • Portabilidade</span>
+            </div>
+            <div class="pyr-level pl-3">
+              <strong>Subcaracterísticas Específicas</strong>
+              <span class="mono">Maturidade • Tolerância a Falhas • Inteligibilidade • Recuperabilidade…</span>
+            </div>
+            <div class="pyr-level pl-4">
+              <strong>Métricas Mensuráveis e Objetivas</strong>
+              <span class="mono">Tempo de resposta (ms) • Complexidade Ciclomática • MTBF • Cobertura (%)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========================================== -->
+    <!-- SLIDE 1.5: CADEIA DE CAUSA E EFEITO        -->
+    <!-- ========================================== -->
+    <section class="slide" data-slide="5" data-block="1" id="slide-5" data-title="1.5: A Cadeia de Causa e Efeito da Qualidade">
+      <div class="slide-content">
+        <div class="slide-top-header">
+          <div class="section-tag mono">
+            <span class="accent-dot"></span> 01.5 // CADEIA DE QUALIDADE
+          </div>
+          <h2 class="slide-heading slim">
+            Como a Qualidade <span class="gradient-text">Flui</span> na Prática?
+          </h2>
+          <p class="slide-lead tight">
+            A norma estabelece uma relação direta de <strong>causa e efeito</strong> entre o processo de engenharia e o valor percebido pelo cliente.
+          </p>
+        </div>
+
+        <div class="chain-flow">
+          <div class="chain-item">
+            <div class="chain-node cn-1">
+              <span class="cn-tag mono">01 // ORIGEM</span>
+              <span class="cn-ic">🛠️</span>
+              <h3>Qualidade do Processo</h3>
+              <p>Como a equipe trabalha: metodologias ágeis, revisões por pares, testes automatizados e integração contínua (CI/CD).</p>
+            </div>
+          </div>
+
+          <div class="chain-arrow">
+            <span class="mono">influencia</span>
+            <span>➜</span>
+          </div>
+
+          <div class="chain-item">
+            <div class="chain-node cn-2">
+              <span class="cn-tag mono">02 // ISO/IEC 9126-3</span>
+              <span class="cn-ic">📄</span>
+              <h3>Qualidade Interna</h3>
+              <p>Código-fonte limpo, baixo acoplamento, alta coesão e arquitetura modular e analisável.</p>
+            </div>
+          </div>
+
+          <div class="chain-arrow">
+            <span class="mono">gera</span>
+            <span>➜</span>
+          </div>
+
+          <div class="chain-item">
+            <div class="chain-node cn-3">
+              <span class="cn-tag mono">03 // ISO/IEC 9126-2</span>
+              <span class="cn-ic">⚙️</span>
+              <h3>Qualidade Externa</h3>
+              <p>Software estável, veloz e sem crashes durante a execução em ambiente de testes e homologação.</p>
+            </div>
+          </div>
+
+          <div class="chain-arrow">
+            <span class="mono">garante</span>
+            <span>➜</span>
+          </div>
+
+          <div class="chain-item">
+            <div class="chain-node cn-4">
+              <span class="cn-tag mono">04 // ISO/IEC 9126-4</span>
+              <span class="cn-ic">👤</span>
+              <h3>Qualidade em Uso</h3>
+              <p>Eficácia, segurança operacional e satisfação do usuário ao cumprir seus objetivos reais de negócio.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="chain-foot mono">
+          💡 <strong>Regra de ouro:</strong> Entender essa cadeia é saber <em>onde, como e quando</em> aplicar cada tipo de métrica e teste.
+        </div>
+      </div>
+    </section>
+    <!-- ========================================== -->
+    <!-- SLIDE 1.6: ESTRUTURA DA NORMA ISO/IEC 9126 -->
+    <!-- ========================================== -->
+    <section class="slide" data-slide="6" data-block="1" id="slide-6" data-title="1.6: Estrutura da Norma ISO/IEC 9126">
+      <div class="slide-content">
+        <div class="slide-top-header text-center">
+          <div class="section-tag mono">
+            <span class="accent-dot"></span> 01.6 // PADRONIZAÇÃO INTERNACIONAL
+          </div>
+          <h2 class="slide-heading">
+            A Estrutura da <span class="gradient-text">ISO/IEC 9126</span>
+          </h2>
+          <p class="slide-lead max-w-lead">
+            Para que engenheiros e clientes falem a mesma língua sobre o que é um "software bom", a norma foi organizada em <strong>4 partes complementares</strong>:
+          </p>
+        </div>
+
+        <div class="quad-cards-grid">
+          <!-- Parte 1 -->
+          <div class="quad-card">
+            <div class="quad-card-header">
+              <span class="part-number mono">PARTE 01</span>
+              <span class="quad-badge frost-1">ISO/IEC 9126-1</span>
+            </div>
+            <h3 class="quad-title">Modelo de Qualidade</h3>
+            <p class="quad-desc">
+              Define a árvore taxonômica central com <strong>6 características principais</strong> e 27 subcaracterísticas que determinam a qualidade do produto.
+            </p>
+            <div class="quad-tags">
+              <span class="tag-chip">Funcionalidade</span>
+              <span class="tag-chip">Confiabilidade</span>
+              <span class="tag-chip">Usabilidade</span>
+              <span class="tag-chip">Eficiência</span>
+              <span class="tag-chip">Manutenibilidade</span>
+              <span class="tag-chip">Portabilidade</span>
+            </div>
+            <div class="quad-footer mono">
+              <span>Foco: <strong>Classificação Teórica</strong></span>
+            </div>
+          </div>
+
+          <!-- Parte 2 -->
+          <div class="quad-card">
+            <div class="quad-card-header">
+              <span class="part-number mono">PARTE 02</span>
+              <span class="quad-badge frost-2">ISO/IEC 9126-2</span>
+            </div>
+            <h3 class="quad-title">Métricas Externas</h3>
+            <p class="quad-desc">
+              Avaliam o comportamento do software enquanto ele está <strong>em execução</strong> (runtime), interagindo com o ambiente e com os testadores.
+            </p>
+            <div class="quad-tags">
+              <span class="tag-chip">Tempo de Resposta (ms)</span>
+              <span class="tag-chip">Vazão (Throughput)</span>
+              <span class="tag-chip">Taxa de Falhas (MTBF)</span>
+              <span class="tag-chip">Consumo de Memória</span>
+            </div>
+            <div class="quad-footer mono">
+              <span>Foco: <strong>Caixa-Preta (Dinâmica)</strong></span>
+            </div>
+          </div>
+
+          <!-- Parte 3 -->
+          <div class="quad-card">
+            <div class="quad-card-header">
+              <span class="part-number mono">PARTE 03</span>
+              <span class="quad-badge frost-3">ISO/IEC 9126-3</span>
+            </div>
+            <h3 class="quad-title">Métricas Internas</h3>
+            <p class="quad-desc">
+              Métricas estáticas aplicadas diretamente nos <strong>artefatos intermediários</strong>: código-fonte, diagramas e documentação de arquitetura.
+            </p>
+            <div class="quad-tags">
+              <span class="tag-chip">Complexidade Ciclomática</span>
+              <span class="tag-chip">Linhas de Código (LOC)</span>
+              <span class="tag-chip">Acoplamento &amp; Coesão</span>
+              <span class="tag-chip">Duplicação de Código</span>
+            </div>
+            <div class="quad-footer mono">
+              <span>Foco: <strong>Caixa-Branca (Estática)</strong></span>
+            </div>
+          </div>
+
+          <!-- Parte 4 -->
+          <div class="quad-card">
+            <div class="quad-card-header">
+              <span class="part-number mono">PARTE 04</span>
+              <span class="quad-badge frost-4">ISO/IEC 9126-4</span>
+            </div>
+            <h3 class="quad-title">Qualidade em Uso</h3>
+            <p class="quad-desc">
+              Mede a percepção do <strong>usuário final em seu ambiente real</strong> ao tentar atingir objetivos específicos de trabalho.
+            </p>
+            <div class="quad-tags">
+              <span class="tag-chip">Eficácia (Conclusão)</span>
+              <span class="tag-chip">Produtividade no Trabalho</span>
+              <span class="tag-chip">Segurança Operacional</span>
+              <span class="tag-chip">Satisfação Subjetiva</span>
+            </div>
+            <div class="quad-footer mono">
+              <span>Foco: <strong>Impacto no Negócio/Usuário</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========================================== -->
+    <!-- SLIDE 1.7: EVOLUÇÃO (ISO 9126 -> ISO 25010)-->
+    <!-- ========================================== -->
+    <section class="slide" data-slide="7" data-block="1" id="slide-7" data-title="1.7: Evolução (Da ISO 9126 para ISO 25010)">
+      <div class="slide-content">
+        <div class="slide-top-header">
+          <div class="section-tag mono">
+            <span class="accent-dot"></span> 01.7 // LINHA DO TEMPO &amp; EVOLUÇÃO
+          </div>
+          <h2 class="slide-heading">
+            Evolução Histórica: <span class="gradient-text">Da ISO 9126 à ISO/IEC 25010</span>
+          </h2>
+          <p class="slide-lead">
+            A ISO 9126 foi tão bem-sucedida que se transformou na espinha dorsal da moderna família <strong>SQuaRE</strong> (<em>Software Product Quality Requirements and Evaluation</em>).
+          </p>
+        </div>
+
+        <div class="evolution-container">
+          <div class="evolution-timeline">
+            <div class="timeline-node">
+              <div class="node-year mono">1991</div>
+              <div class="node-content">
+                <span class="node-badge mono">PRIMEIRA EDIÇÃO</span>
+                <h4 class="node-title">ISO/IEC 9126:1991</h4>
+                <p>Primeira formalização internacional dos 6 pilares de qualidade de software.</p>
+              </div>
+            </div>
+
+            <div class="timeline-connector">
+              <div class="pulse-line"></div>
+            </div>
+
+            <div class="timeline-node current">
+              <div class="node-year mono">2001 - 2004</div>
+              <div class="node-content">
+                <span class="node-badge mono highlight">DIVISÃO EM 4 PARTES</span>
+                <h4 class="node-title">ISO/IEC 9126-1, 2, 3, 4</h4>
+                <p>Separação clara entre modelo conceitual, métricas internas, externas e em uso.</p>
+              </div>
+            </div>
+
+            <div class="timeline-connector">
+              <div class="pulse-line"></div>
+            </div>
+
+            <div class="timeline-node future">
+              <div class="node-year mono">2011 - Hoje</div>
+              <div class="node-content">
+                <span class="node-badge mono">ATUAL SQuARE</span>
+                <h4 class="node-title">ISO/IEC 25010</h4>
+                <p>Evolução com 8 características, promovendo Segurança e Compatibilidade a pilares de primeiro nível.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="comparison-card">
+            <div class="comparison-header">
+              <span class="mono header-tag">// O QUE MUDOU NA TRANSIÇÃO?</span>
+            </div>
+            <div class="comparison-grid">
+              <div class="comp-col">
+                <span class="comp-title mono text-dim">ISO/IEC 9126 (6 Características)</span>
+                <ul class="comp-list">
+                  <li>• Funcionalidade (segurança era apenas subitem)</li>
+                  <li>• Confiabilidade</li>
+                  <li>• Usabilidade</li>
+                  <li>• Eficiência</li>
+                  <li>• Manutenibilidade</li>
+                  <li>• Portabilidade</li>
+                </ul>
+              </div>
+              <div class="comp-arrow">
+                <span>➜</span>
+              </div>
+              <div class="comp-col highlight-col">
+                <span class="comp-title mono text-frost">ISO/IEC 25010 (8 Características)</span>
+                <ul class="comp-list">
+                  <li>• Adequação Funcional</li>
+                  <li>• Confiabilidade &amp; Desempenho</li>
+                  <li>• Usabilidade &amp; Manutenibilidade</li>
+                  <li>• Portabilidade</li>
+                  <li class="new-pill">★ <strong>Segurança</strong> (elevada a pilar autônomo)</li>
+                  <li class="new-pill">★ <strong>Compatibilidade / Interoperabilidade</strong></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="next-block-teaser">
+          <div class="teaser-left">
+            <span class="teaser-badge mono">PRÓXIMO BLOCO</span>
+            <span class="teaser-title">Bloco 2: Mergulho nas 6 Características da ISO 9126-1</span>
+          </div>
+          <button class="teaser-btn" onclick="goToSlide(8)">
+            <span>Iniciar Bloco 2</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-inline">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- ========================================== -->
+    <!-- SLIDE 2.1: FUNCIONALIDADE & CONFIABILIDADE -->
+    <!-- ========================================== -->
+    <section class="slide" data-slide="8" data-block="2" id="slide-8" data-title="2.1: Funcionalidade &amp; Confiabilidade">
+      <div class="slide-content">
+        <div class="slide-top-header">
+          <div class="section-tag mono"><span class="accent-dot"></span> 02.1 // FUNCIONALIDADE &amp; CONFIABILIDADE</div>
+          <h2 class="slide-heading slim">Faz o que deve… e <span class="gradient-text">continua no ar?</span></h2>
+        </div>
+        <div class="char-grid">
+          <article class="char-card c-frost">
+            <div class="char-head">
+              <span class="char-icon">🎯</span>
+              <div>
+                <span class="char-iso mono">CARACTERÍSTICA 01</span>
+                <h3 class="char-name">Funcionalidade</h3>
+              </div>
+            </div>
+            <div class="char-question mono">&gt; O sistema faz o que deve?</div>
+            <p class="char-def">Capacidade de prover funções que satisfaçam as necessidades <strong>declaradas e implícitas</strong> do usuário.</p>
+            <span class="sub-label mono">// SUBCARACTERÍSTICAS</span>
+            <ul class="sub-list">
+              <li class="sub-item"><span class="sub-name">Adequação</span><span class="sub-desc">Funções apropriadas para a tarefa</span></li>
+              <li class="sub-item"><span class="sub-name">Acurácia</span><span class="sub-desc">Precisão dos resultados</span></li>
+              <li class="sub-item"><span class="sub-name">Interoperabilidade</span><span class="sub-desc">Capacidade de interagir com outros sistemas</span></li>
+              <li class="sub-item"><span class="sub-name">Segurança</span><span class="sub-desc">Proteção de dados e acessos</span></li>
+              <li class="sub-item"><span class="sub-name">Conformidade</span><span class="sub-desc">Aderência a normas e leis</span></li>
+            </ul>
+          </article>
+          <article class="char-card c-aurora">
+            <div class="char-head">
+              <span class="char-icon">🛡️</span>
+              <div>
+                <span class="char-iso mono">CARACTERÍSTICA 02</span>
+                <h3 class="char-name">Confiabilidade</h3>
+              </div>
+            </div>
+            <div class="char-question mono">&gt; Ele se mantém no ar sem falhas?</div>
+            <p class="char-def">Capacidade de manter seu <strong>nível de desempenho</strong> sob condições especificadas.</p>
+            <span class="sub-label mono">// SUBCARACTERÍSTICAS</span>
+            <ul class="sub-list">
+              <li class="sub-item"><span class="sub-name">Maturidade</span><span class="sub-desc">Evitar falhas no decorrer do tempo</span></li>
+              <li class="sub-item"><span class="sub-name">Tolerância a Falhas</span><span class="sub-desc">Manter o desempenho mesmo na presença de defeitos</span></li>
+              <li class="sub-item"><span class="sub-name">Recuperabilidade</span><span class="sub-desc">Restabelecer operação e dados após uma falha</span></li>
+              <li class="sub-item"><span class="sub-name">Conformidade</span><span class="sub-desc">Aderência a normas e padrões</span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- ========================================== -->
+    <!-- SLIDE 2.2: USABILIDADE & EFICIÊNCIA        -->
+    <!-- ========================================== -->
+    <section class="slide" data-slide="9" data-block="2" id="slide-9" data-title="2.2: Usabilidade &amp; Eficiência">
+      <div class="slide-content">
+        <div class="slide-top-header">
+          <div class="section-tag mono"><span class="accent-dot"></span> 02.2 // USABILIDADE &amp; EFICIÊNCIA</div>
+          <h2 class="slide-heading slim">É fácil de usar… e <span class="gradient-text">rápido de verdade?</span></h2>
+        </div>
+        <div class="char-grid">
+          <article class="char-card c-teal">
+            <div class="char-head">
+              <span class="char-icon">🧭</span>
+              <div>
+                <span class="char-iso mono">CARACTERÍSTICA 03</span>
+                <h3 class="char-name">Usabilidade</h3>
+              </div>
+            </div>
+            <div class="char-question mono">&gt; É fácil de usar?</div>
+            <p class="char-def">Capacidade de ser <strong>compreendido, aprendido, operado</strong> e ser atraente ao usuário.</p>
+            <span class="sub-label mono">// SUBCARACTERÍSTICAS</span>
+            <ul class="sub-list">
+              <li class="sub-item"><span class="sub-name">Inteligibilidade</span><span class="sub-desc">Entender se e como serve à tarefa</span></li>
+              <li class="sub-item"><span class="sub-name">Apreensibilidade</span><span class="sub-desc">Facilidade de aprendizado pelo usuário</span></li>
+              <li class="sub-item"><span class="sub-name">Operacionalidade</span><span class="sub-desc">Facilidade de controle e operação</span></li>
+              <li class="sub-item"><span class="sub-name">Proteção frente a erros</span><span class="sub-desc">Prevenir erros involuntários do usuário</span></li>
+              <li class="sub-item"><span class="sub-name">Estética / Atratividade</span><span class="sub-desc">Interface agradável e consistente</span></li>
+              <li class="sub-item"><span class="sub-name">Acessibilidade</span><span class="sub-desc">Uso por todos os perfis e necessidades</span></li>
+              <li class="sub-item"><span class="sub-name">Conformidade</span><span class="sub-desc">Aderência a normas de usabilidade</span></li>
+            </ul>
+          </article>
+          <article class="char-card c-purple">
+            <div class="char-head">
+              <span class="char-icon">⚡</span>
+              <div>
+                <span class="char-iso mono">CARACTERÍSTICA 04</span>
+                <h3 class="char-name">Eficiência</h3>
+              </div>
+            </div>
+            <div class="char-question mono">&gt; Consome muita RAM/CPU ou responde rápido?</div>
+            <p class="char-def">Relação entre o <strong>nível de desempenho</strong>, o tempo de execução e os recursos consumidos.</p>
+            <span class="sub-label mono">// SUBCARACTERÍSTICAS</span>
+            <ul class="sub-list">
+              <li class="sub-item"><span class="sub-name">Comportamento no Tempo</span><span class="sub-desc">Tempos de resposta, processamento e latência</span></li>
+              <li class="sub-item"><span class="sub-name">Utilização de Recursos</span><span class="sub-desc">Memória, processador e rede utilizados</span></li>
+              <li class="sub-item"><span class="sub-name">Conformidade</span><span class="sub-desc">Aderência a normas de desempenho</span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- ========================================== -->
+    <!-- SLIDE 2.3: MANUTENIBILIDADE & PORTABILIDADE-->
+    <!-- ========================================== -->
+    <section class="slide" data-slide="10" data-block="2" id="slide-10" data-title="2.3: Manutenibilidade &amp; Portabilidade">
+      <div class="slide-content">
+        <div class="slide-top-header">
+          <div class="section-tag mono"><span class="accent-dot"></span> 02.3 // MANUTENIBILIDADE &amp; PORTABILIDADE</div>
+          <h2 class="slide-heading slim">Código limpo… e <span class="gradient-text">roda em qualquer lugar?</span></h2>
+        </div>
+        <div class="char-grid">
+          <article class="char-card c-blue">
+            <div class="char-head">
+              <span class="char-icon">🛠️</span>
+              <div>
+                <span class="char-iso mono">CARACTERÍSTICA 05</span>
+                <h3 class="char-name">Manutenibilidade</h3>
+              </div>
+            </div>
+            <div class="char-question mono">&gt; O código é limpo para refatoração e testes?</div>
+            <p class="char-def">Facilidade com que o software pode ser <strong>modificado</strong>, seja para correção, melhoria ou adaptação.</p>
+            <span class="sub-label mono">// SUBCARACTERÍSTICAS</span>
+            <ul class="sub-list">
+              <li class="sub-item"><span class="sub-name">Analisabilidade</span><span class="sub-desc">Facilidade para diagnosticar causas de falhas</span></li>
+              <li class="sub-item"><span class="sub-name">Modificabilidade</span><span class="sub-desc">Facilidade para alterar o código com segurança</span></li>
+              <li class="sub-item"><span class="sub-name">Estabilidade</span><span class="sub-desc">Evitar efeitos colaterais indesejados pós-alteração</span></li>
+              <li class="sub-item"><span class="sub-name">Testabilidade</span><span class="sub-desc">Facilidade para validar e testar as mudanças</span></li>
+              <li class="sub-item"><span class="sub-name">Conformidade</span><span class="sub-desc">Aderência a padrões de codificação</span></li>
+            </ul>
+          </article>
+          <article class="char-card c-green">
+            <div class="char-head">
+              <span class="char-icon">📦</span>
+              <div>
+                <span class="char-iso mono">CARACTERÍSTICA 06</span>
+                <h3 class="char-name">Portabilidade</h3>
+              </div>
+            </div>
+            <div class="char-question mono">&gt; Roda em qualquer SO ou infraestrutura?</div>
+            <p class="char-def">Capacidade do sistema de ser <strong>transferido</strong> entre diferentes ambientes (SO, hardware, banco de dados).</p>
+            <span class="sub-label mono">// SUBCARACTERÍSTICAS</span>
+            <ul class="sub-list">
+              <li class="sub-item"><span class="sub-name">Adaptabilidade</span><span class="sub-desc">Adaptar-se a novos ambientes sem refazer código</span></li>
+              <li class="sub-item"><span class="sub-name">Capacidade de Instalação</span><span class="sub-desc">Facilidade de implantação e setup</span></li>
+              <li class="sub-item"><span class="sub-name">Coexistência</span><span class="sub-desc">Conviver com outros softwares no mesmo ambiente</span></li>
+              <li class="sub-item"><span class="sub-name">Capacidade para Substituir</span><span class="sub-desc">Substituir outro produto mantendo funções</span></li>
+              <li class="sub-item"><span class="sub-name">Conformidade</span><span class="sub-desc">Aderência a normas de portabilidade</span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- ========================================== -->
+    <!-- SLIDE 2.4: TRADE-OFFS DE QUALIDADE         -->
+    <!-- ========================================== -->
+    <section class="slide" data-slide="11" data-block="2" id="slide-11" data-title="2.4: Trade-offs de Qualidade (O Dilema da Engenharia)">
+      <div class="slide-content">
+        <div class="slide-top-header">
+          <div class="section-tag mono">
+            <span class="accent-dot"></span> 02.4 // O DILEMA DA ENGENHARIA: TRADE-OFFS
+          </div>
+          <h2 class="slide-heading slim">
+            O Dilema da Engenharia: <span class="gradient-text-warn">Trade-offs de Qualidade</span>
+          </h2>
+          <p class="slide-lead tight">
+            Nenhum software consegue nota máxima nas 6 características simultaneamente: <strong>qualidade é a arte de escolher concessões conscientes.</strong>
+          </p>
+        </div>
+
+        <div class="tradeoff-grid">
+          <!-- Conflito 1 -->
+          <div class="tradeoff-card">
+            <div class="to-head">
+              <span class="to-tag mono">CONFLITO 01</span>
+              <span class="to-icon">🔐 vs ⚡</span>
+            </div>
+            <h3>Segurança vs. Eficiência</h3>
+            <p class="to-conflito">
+              Criptografia pesada (AES-256), hashing e autenticação multifator contínua aumentam a <strong>latência</strong> e o consumo de <strong>processamento (CPU)</strong>.
+            </p>
+            <div class="to-exemplo mono">
+              <strong>Exemplo:</strong> Um banco digital prioriza Segurança; um game multiplayer prioriza latência ultrabaixa.
+            </div>
+          </div>
+
+          <!-- Conflito 2 -->
+          <div class="tradeoff-card">
+            <div class="to-head">
+              <span class="to-tag mono">CONFLITO 02</span>
+              <span class="to-icon">📦 vs ⚡</span>
+            </div>
+            <h3>Portabilidade vs. Eficiência</h3>
+            <p class="to-conflito">
+              Camadas de abstração e runtimes multiplataforma (Electron, Java VM, contêineres) elevam drasticamente o consumo de <strong>memória RAM</strong> frente a binários nativos.
+            </p>
+            <div class="to-exemplo mono">
+              <strong>Exemplo:</strong> VS Code (Electron/JS) vs. Vim/Sublime Text (C++ nativo compilado direto na máquina).
+            </div>
+          </div>
+
+          <!-- Conflito 3 -->
+          <div class="tradeoff-card">
+            <div class="to-head">
+              <span class="to-tag mono">CONFLITO 03</span>
+              <span class="to-icon">🛠️ vs 🏎️</span>
+            </div>
+            <h3>Manutenibilidade vs. Velocidade Máxima</h3>
+            <p class="to-conflito">
+              Arquiteturas limpas (Clean Architecture, microsserviços, injeção de dependência) inserem <strong>indireções e chamadas extras</strong> na pilha de execução.
+            </p>
+            <div class="to-exemplo mono">
+              <strong>Exemplo:</strong> Sistemas de trading de alta frequência (HFT) sacrificam abstrações por código procedural em C inline.
+            </div>
+          </div>
+
+          <!-- Conflito 4 -->
+          <div class="tradeoff-card">
+            <div class="to-head">
+              <span class="to-tag mono">CONFLITO 04</span>
+              <span class="to-icon">🧭 vs 🛡️</span>
+            </div>
+            <h3>Usabilidade vs. Confiabilidade / Segurança</h3>
+            <p class="to-conflito">
+              Interfaces com fluxos "1 clique" sem confirmações aumentam a agilidade, mas elevam o risco de <strong>ações acidentais irreversíveis</strong> do usuário.
+            </p>
+            <div class="to-exemplo mono">
+              <strong>Exemplo:</strong> Deletar uma base de produção exige atrito intencional (digitar o nome da instância antes de confirmar).
+            </div>
+          </div>
+        </div>
+
+        <div class="tradeoff-summary-banner mono">
+          <span>⚖️</span>
+          <div>
+            <strong>Maturidade de Engenharia:</strong> Não existe "software perfeito em tudo". Projetar com qualidade é estabelecer um <em>Perfil de Requisitos</em> consciente para o propósito do negócio.
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========================================== -->
+    <!-- SLIDE 12: MINIGAME - ABERTURA TRIBUNAL     -->
+    <!-- ========================================== -->
+    <section class="slide" data-slide="12" data-block="tribunal" id="slide-12" data-title="Minigame: O Tribunal da Qualidade (Abertura)">
+      <div class="slide-content tribunal-intro-layout">
+        <div class="tribunal-badge-main mono">⚖️ MINIGAME INTERATIVO // BATALHA DAS BANCADAS</div>
+        <h1 class="tribunal-title-main">O Tribunal da Qualidade</h1>
+        <p class="tribunal-intro-sub">
+          A sala será dividida em duas bancadas jurídicas da computação: <strong>Lado A (Esquerda)</strong> vs. <strong>Lado B (Direita)</strong>.<br>
+          Analisaremos 4 crimes reais cometidos contra a engenharia de software. Quem diagnosticar a característica violada da ISO 9126 primeiro marca ponto!
+        </p>
+
+        <!-- Placar Central Hero -->
+        <div class="tribunal-scoreboard-hero">
+          <div class="bench-card bench-a">
+            <span class="bench-tag mono">BANCADA 01</span>
+            <span class="bench-name">🏛️ LADO A (Esquerda)</span>
+            <span class="bench-score" id="heroScoreA">0</span>
+            <div class="bench-btns">
+              <button class="bench-btn" onclick="addTribunalScore('a', 1)">+1 Ponto</button>
+              <button class="bench-btn minus" onclick="addTribunalScore('a', -1)">-1</button>
+            </div>
+          </div>
+
+          <div class="scoreboard-vs">VS</div>
+
+          <div class="bench-card bench-b">
+            <span class="bench-tag mono">BANCADA 02</span>
+            <span class="bench-name">🏛️ LADO B (Direita)</span>
+            <span class="bench-score" id="heroScoreB">0</span>
+            <div class="bench-btns">
+              <button class="bench-btn" onclick="addTribunalScore('b', 1)">+1 Ponto</button>
+              <button class="bench-btn minus" onclick="addTribunalScore('b', -1)">-1</button>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 1.8rem;">
+          <button class="poll-button" onclick="goToSlide(13)">
+            <span>Começar o Julgamento • Rodada 1</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-inline">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SLIDE 13: RODADA 1 - O APAGÃO AZUL         -->
+    <!-- ========================================== -->
+    <section class="slide" data-slide="13" data-block="tribunal" id="slide-13" data-title="Tribunal: Rodada 1 - O Apagão Azul (CrowdStrike)">
+      <div class="slide-content">
+        <div class="case-top-bar">
+          <div class="section-tag mono"><span class="accent-dot danger"></span> RODADA 01 // JULHO DE 2024</div>
+          <div class="case-scoreboard-compact mono">
+            <span class="cs-team team-a">Lado A: <strong id="cScoreA1">0</strong> <button class="cs-add-btn" onclick="addTribunalScore('a', 1)">+1</button></span>
+            <span>|</span>
+            <span class="cs-team team-b">Lado B: <strong id="cScoreB1">0</strong> <button class="cs-add-btn" onclick="addTribunalScore('b', 1)">+1</button></span>
+          </div>
+        </div>
+
+        <div class="case-layout">
+          <!-- Mídia do Caso: Tela Azul CrowdStrike -->
+          <div class="case-media-side">
+            <div class="case-media-wrap">
+              <img class="zoomable" src="assets/images/crowdstrike.webp" alt="Tela Azul BSOD CrowdStrike em aeroporto" title="Clique para ampliar">
+              <span class="case-stamp mono">PROVA MATERIAL 01</span>
+            </div>
+            <div class="case-media-caption mono">
+              Aeroportos, bancos e hospitais paralisados mundialmente por Tela Azul da Morte em massa (BSOD).
+            </div>
+          </div>
+
+          <!-- Conteúdo e Desafio -->
+          <div class="case-content-side">
+            <div class="case-context-box">
+              <strong>O Contexto:</strong> Uma atualização defeituosa de segurança da CrowdStrike derruba sistemas críticos no mundo inteiro. O software recebeu um arquivo de configuração com dados inválidos, não soube tratar o erro interno, entrou em pânico de kernel e derrubou o Windows por completo.
+            </div>
+
+            <div class="case-challenge-box">
+              <span class="challenge-badge mono">⚖️ O DESAFIO (VALENDO PONTO PARA A BANCADA):</span>
+              <p class="challenge-question">
+                "Se o sistema não soube lidar com um erro interno e parou de funcionar completamente, qual característica da ISO 9126 foi ferida?"
+              </p>
+            </div>
+
+            <button class="case-reveal-btn" id="btnRevealCase1" onclick="revealVerdict(1)">
+              <span>⚖️ Revelar Veredito da ISO 9126</span>
+            </button>
+
+            <div class="case-verdict-card" id="verdictCard1">
+              <div class="verdict-header">
+                <span class="verdict-tag mono">// VEREDITO DO TRIBUNAL</span>
+                <span class="verdict-answer">Confiabilidade!</span>
+              </div>
+              <p class="verdict-text">
+                <strong>Exato! Faltou Tolerância a Falhas e Recuperabilidade.</strong> Um bom software deve isolar erros imprevistos e continuar operando em modo degradado ou restabelecer a operação rapidamente, e jamais derrubar o sistema operacional inteiro.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SLIDE 14: RODADA 2 - O PÂNICO NO HAVAÍ     -->
+    <!-- ========================================== -->
+    <section class="slide" data-slide="14" data-block="tribunal" id="slide-14" data-title="Tribunal: Rodada 2 - O Pânico no Havaí (Alerta de Míssil)">
+      <div class="slide-content">
+        <div class="case-top-bar">
+          <div class="section-tag mono"><span class="accent-dot danger"></span> RODADA 02 // JANEIRO DE 2018</div>
+          <div class="case-scoreboard-compact mono">
+            <span class="cs-team team-a">Lado A: <strong id="cScoreA2">0</strong> <button class="cs-add-btn" onclick="addTribunalScore('a', 1)">+1</button></span>
+            <span>|</span>
+            <span class="cs-team team-b">Lado B: <strong id="cScoreB2">0</strong> <button class="cs-add-btn" onclick="addTribunalScore('b', 1)">+1</button></span>
+          </div>
+        </div>
+
+        <div class="case-layout">
+          <!-- Mídia do Caso: SMS Havaí e Interface -->
+          <div class="case-media-side">
+            <div class="case-media-wrap">
+              <img class="zoomable" src="assets/images/fake_missil_havai.webp" alt="Alerta SMS de míssil balístico no Havaí" title="Clique para ampliar">
+              <span class="case-stamp mono">PROVA MATERIAL 02</span>
+            </div>
+            <div class="case-media-caption mono">
+              "BALLISTIC MISSILE THREAT INBOUND TO HAWAII. THIS IS NOT A DRILL." Alarme falso disparado para milhares de celulares.
+            </div>
+          </div>
+
+          <!-- Conteúdo e Desafio -->
+          <div class="case-content-side">
+            <div class="case-context-box">
+              <strong>O Contexto:</strong> O Havaí entra em pânico total após receber um SMS de ameaça de míssil balístico. O motivo? O software governamental não tinha nenhum bug de compilação ou cálculo, mas a interface continha um menu com o botão de "Teste de Rotina" colado exatamente abaixo do botão de "Alerta Real", sem diálogo de confirmação ("Tem certeza?").
+            </div>
+
+            <div class="case-challenge-box">
+              <span class="challenge-badge mono">⚖️ O DESAFIO (VALENDO PONTO PARA A BANCADA):</span>
+              <p class="challenge-question">
+                "O código funcionou perfeitamente, mas induziu o humano a um erro catastrófico. Que característica a equipe de design ignorou?"
+              </p>
+            </div>
+
+            <button class="case-reveal-btn" id="btnRevealCase2" onclick="revealVerdict(2)">
+              <span>⚖️ Revelar Veredito da ISO 9126</span>
+            </button>
+
+            <div class="case-verdict-card" id="verdictCard2">
+              <div class="verdict-header">
+                <span class="verdict-tag mono">// VEREDITO DO TRIBUNAL</span>
+                <span class="verdict-answer">Usabilidade!</span>
+              </div>
+              <p class="verdict-text">
+                <strong>Acertaram! Faltou Proteção frente a erros de usuário e Operacionalidade.</strong> A ISO 9126 deixa claro que interfaces confusas que induzem ao erro humano são falhas de qualidade do próprio software, e não do usuário.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SLIDE 15: RODADA 3 - LOADING DO GTA ONLINE -->
+    <!-- ========================================== -->
+    <section class="slide" data-slide="15" data-block="tribunal" id="slide-15" data-title="Tribunal: Rodada 3 - O Loading Eterno do GTA Online">
+      <div class="slide-content">
+        <div class="case-top-bar">
+          <div class="section-tag mono"><span class="accent-dot danger"></span> RODADA 03 // O CASO DO JSON INFINITO</div>
+          <div class="case-scoreboard-compact mono">
+            <span class="cs-team team-a">Lado A: <strong id="cScoreA3">0</strong> <button class="cs-add-btn" onclick="addTribunalScore('a', 1)">+1</button></span>
+            <span>|</span>
+            <span class="cs-team team-b">Lado B: <strong id="cScoreB3">0</strong> <button class="cs-add-btn" onclick="addTribunalScore('b', 1)">+1</button></span>
+          </div>
+        </div>
+
+        <div class="case-layout">
+          <!-- Mídia do Caso: Vídeo MP4 em Loop -->
+          <div class="case-media-side">
+            <div class="case-media-wrap">
+              <video src="assets/videos/gta_loading_meme.mp4" autoplay loop muted playsinline></video>
+              <span class="case-stamp mono">PROVA MATERIAL 03 • VÍDEO</span>
+            </div>
+            <div class="case-media-caption mono">
+              Jogadores esperavam até 15 minutos na tela de carregamento do GTA Online no PC.
+            </div>
+          </div>
+
+          <!-- Conteúdo e Desafio -->
+          <div class="case-content-side">
+            <div class="case-context-box">
+              <strong>O Contexto:</strong> Por anos, a comunidade esperou entre 10 e 15 minutos para entrar no jogo. Até que um desenvolvedor fez engenharia reversa no binário e descobriu que o parser lia o mesmo arquivo JSON de 10 MB exatamente 1.984.531 vezes em um único núcleo de CPU, num laço quadrático $O(n^2)$.
+            </div>
+
+            <div class="case-challenge-box">
+              <span class="challenge-badge mono">⚖️ O DESAFIO (VALENDO PONTO PARA A BANCADA):</span>
+              <p class="challenge-question">
+                "O jogo não caiu e não deu tela azul. Mas o código desperdiçou tempo e processador à toa. Qual característica foi ferida?"
+              </p>
+            </div>
+
+            <button class="case-reveal-btn" id="btnRevealCase3" onclick="revealVerdict(3)">
+              <span>⚖️ Revelar Veredito da ISO 9126</span>
+            </button>
+
+            <div class="case-verdict-card" id="verdictCard3">
+              <div class="verdict-header">
+                <span class="verdict-tag mono">// VEREDITO DO TRIBUNAL</span>
+                <span class="verdict-answer">Eficiência!</span>
+              </div>
+              <p class="verdict-text">
+                <strong>Isso mesmo! Faltou Comportamento em Relação ao Tempo e Utilização de Recursos.</strong> O fã corrigiu o código com 1 linha de hash table e reduziu o carregamento de 15 minutos para 1 minuto e meio (70% mais rápido).
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SLIDE 16: RODADA 4 - O GPS ASSASSINO       -->
+    <!-- ========================================== -->
+    <section class="slide" data-slide="16" data-block="tribunal" id="slide-16" data-title="Tribunal: Rodada 4 - O GPS do Michael Scott (The Office)">
+      <div class="slide-content">
+        <div class="case-top-bar">
+          <div class="section-tag mono"><span class="accent-dot danger"></span> RODADA 04 // O LAGO DO MICHAEL SCOTT</div>
+          <div class="case-scoreboard-compact mono">
+            <span class="cs-team team-a">Lado A: <strong id="cScoreA4">0</strong> <button class="cs-add-btn" onclick="addTribunalScore('a', 1)">+1</button></span>
+            <span>|</span>
+            <span class="cs-team team-b">Lado B: <strong id="cScoreB4">0</strong> <button class="cs-add-btn" onclick="addTribunalScore('b', 1)">+1</button></span>
+          </div>
+        </div>
+
+        <div class="case-layout">
+          <!-- Mídia do Caso: GIF do The Office -->
+          <div class="case-media-side">
+            <div class="case-media-wrap">
+              <img class="zoomable" src="assets/images/the-office-gps.gif" alt="Michael Scott dirigindo para dentro do lago seguindo o GPS" title="Clique para ampliar">
+              <span class="case-stamp mono">PROVA MATERIAL 04 • GIF</span>
+            </div>
+            <div class="case-media-caption mono">
+              "The machine knows where it's going! Drive into the lake!" — Michael Scott confiando cegamente no GPS.
+            </div>
+          </div>
+
+          <!-- Conteúdo e Desafio -->
+          <div class="case-content-side">
+            <div class="case-context-box">
+              <strong>O Contexto:</strong> O Michael Scott digita o endereço, o GPS calcula uma rota matematicamente impecável. Porém, os dados cartográficos ignoraram que havia um lago no caminho. O sistema ordenou com convicção: *"Vire à direita agora!"*, e o carro afundou direto na água.
+            </div>
+
+            <div class="case-challenge-box">
+              <span class="challenge-badge mono">⚖️ O DESAFIO (VALENDO O PONTO FINAL):</span>
+              <p class="challenge-question">
+                "O sistema calculou certo, mas entregou um resultado completamente inadequado para o mundo real. Qual característica afundou aqui?"
+              </p>
+            </div>
+
+            <button class="case-reveal-btn" id="btnRevealCase4" onclick="revealVerdict(4)">
+              <span>⚖️ Revelar Veredito da ISO 9126</span>
+            </button>
+
+            <div class="case-verdict-card" id="verdictCard4">
+              <div class="verdict-header">
+                <span class="verdict-tag mono">// VEREDITO DO TRIBUNAL</span>
+                <span class="verdict-answer">Funcionalidade!</span>
+              </div>
+              <p class="verdict-text">
+                <strong>Fechou! Faltaram Acurácia e Adequação.</strong> A funcionalidade de um software só é atendida quando as funções cumprem a necessidade real do usuário de forma precisa, correta e válida para o mundo real.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SLIDE 17: TRIBUNAL - VEREDITO DAS BANCADAS -->
+    <!-- ========================================== -->
+    <section class="slide" data-slide="17" data-block="tribunal" id="slide-17" data-title="Tribunal: Veredito Final das Bancadas">
+      <div class="slide-content">
+        <div class="slide-top-header text-center">
+          <div class="section-tag mono"><span class="accent-dot"></span> ENCERRAMENTO DO JULGAMENTO</div>
+          <h2 class="slide-heading">Veredito Final: <span class="gradient-text">A Bancada Campeã</span></h2>
+          <p class="slide-lead max-w-lead">
+            Parabéns aos engenheiros de software de ambas as bancadas! O julgamento dos 4 casos consolida o domínio prático dos pilares da ISO/IEC 9126.
+          </p>
+        </div>
+
+        <div class="tribunal-final-grid">
+          <!-- Card do Campeão Calculado -->
+          <div class="winner-bench-card" id="tribunalWinnerCard">
+            <div class="wb-icon" id="wbIcon">🏆</div>
+            <div class="wb-title" id="wbTitle">Lado A Campeão!</div>
+            <div class="wb-score-display mono" id="wbScoreDisplay">Lado A: 0 pts × Lado B: 0 pts</div>
+            <p style="font-size: 0.95rem; color: var(--nord4); margin-bottom: 1.25rem;">
+              Excelente precisão diagnóstica em Confiabilidade, Usabilidade, Eficiência e Funcionalidade!
+            </p>
+            <button class="poll-button-reset" onclick="resetTribunalScore()" style="padding: 0.4rem 0.9rem;">↺ Zerar Placar</button>
+          </div>
+
+          <!-- Transição para o Bloco 3 -->
+          <div class="next-block-teaser" style="flex-direction: column; align-items: flex-start; gap: 1rem; padding: 2rem;">
+            <span class="teaser-badge mono">PRÓXIMO PASSO DA APRESENTAÇÃO</span>
+            <h3 style="font-size: 1.4rem; color: var(--nord6); margin: 0;">
+              Mas afinal... como a engenharia <em>mede</em> tudo isso com métricas quantitativas?
+            </h3>
+            <p style="font-size: 0.95rem; color: var(--nord4); margin: 0; line-height: 1.45;">
+              Entramos agora no <strong>Bloco 3</strong>: análise estática no código-fonte (Parte 3), testes dinâmicos de carga (Parte 2) e métricas de satisfação (Parte 4).
+            </p>
+            <button class="teaser-btn" onclick="goToSlide(18)" style="margin-top: 0.5rem; padding: 0.65rem 1.4rem; font-size: 0.95rem;">
+              <span>Iniciar Bloco 3: As Métricas</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-inline">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========================================== -->
+    <!-- SLIDE 3.1: PROCESSO & VISÃO GERAL MÉTRICAS -->
+    <!-- ========================================== -->
+    <section class="slide" data-slide="18" data-block="3" id="slide-18" data-title="3.1: O Processo de Avaliação &amp; Visão Geral das Métricas">
+      <div class="slide-content eval-integrated-layout">
+        <div class="slide-top-header">
+          <div class="section-tag mono"><span class="accent-dot"></span> 03.1 // AVALIAÇÃO &amp; MÉTRICAS</div>
+          <h2 class="slide-heading slim">O Processo em <span class="gradient-text">3 Estágios</span> &amp; As <span class="gradient-text">3 Visões da Norma</span></h2>
+          <p class="slide-lead tight">Antes de detalhar as fórmulas, a ISO/IEC 9126 estabelece a lógica de como requisitos se transformam em decisões:</p>
+        </div>
+
+        <!-- 3 Estágios -->
+        <div class="stage-pills-row">
+          <div class="stage-pill-card st-1">
+            <span class="st-tag mono">ESTÁGIO 01 // PLANEJAMENTO</span>
+            <div class="st-title">1. Definir Requisitos</div>
+            <div class="st-desc">Prioriza quais características (Segurança, Desempenho) são vitais para o projeto.</div>
+          </div>
+          <div class="stage-arrow-sep">➜</div>
+          <div class="stage-pill-card st-2">
+            <span class="st-tag mono">ESTÁGIO 02 // SELEÇÃO</span>
+            <div class="st-title">2. Selecionar Métricas &amp; Metas</div>
+            <div class="st-desc">Escolhe métricas adequadas e define faixas de aceite (excelente, tolerável, reprovado).</div>
+          </div>
+          <div class="stage-arrow-sep">➜</div>
+          <div class="stage-pill-card st-3">
+            <span class="st-tag mono">ESTÁGIO 03 // EXECUÇÃO</span>
+            <div class="st-title">3. Medir &amp; Decidir</div>
+            <div class="st-desc">Executa medições práticas nas 3 visões para decidir se o produto é liberado ou rejeitado.</div>
+          </div>
+        </div>
+
+        <!-- 3 Visões da Norma -->
+        <div class="metric-trio-row">
+          <div class="metric-trio-card mt-1">
+            <div class="mt-head"><span class="mt-iso mono">PARTE 3 • ISO/IEC 9126-3</span><span class="mt-icon">📄</span></div>
+            <h3>Métricas Internas</h3>
+            <p>Aferidas <strong>estaticamente</strong> no código-fonte, arquitetura e documentação sem executar o software.</p>
+            <span class="mt-when mono">Fase: Desenvolvimento</span>
+          </div>
+
+          <div class="metric-trio-card mt-2">
+            <div class="mt-head"><span class="mt-iso mono">PARTE 2 • ISO/IEC 9126-2</span><span class="mt-icon">⚙️</span></div>
+            <h3>Métricas Externas</h3>
+            <p>Aferidas com o <strong>software em execução</strong> em ambiente de teste, carga ou simulação.</p>
+            <span class="mt-when mono">Fase: Testes &amp; Validação</span>
+          </div>
+
+          <div class="metric-trio-card mt-3">
+            <div class="mt-head"><span class="mt-iso mono">PARTE 4 • ISO/IEC 9126-4</span><span class="mt-icon">👤</span></div>
+            <h3>Qualidade em Uso</h3>
+            <p>Aferidas no <strong>ambiente de trabalho real</strong> sob a ótica e produtividade do usuário final.</p>
+            <span class="mt-when mono">Fase: Produção &amp; Operação</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========================================== -->
+    <!-- SLIDE 3.2: MÉTRICAS INTERNAS (PARTE 3)     -->
+    <!-- ========================================== -->
+    <section class="slide" data-slide="19" data-block="3" id="slide-19" data-title="3.2: Métricas Internas (Parte 3)">
+      <div class="slide-content">
+        <div class="split-layout">
+          <div class="slide-text-side">
+            <div class="section-tag mono"><span class="accent-dot"></span> 03.2 // MÉTRICAS INTERNAS • ISO/IEC 9126-3</div>
+            <h2 class="slide-heading slim">Análise <span class="gradient-text">estática</span>:<br>medir sem executar</h2>
+            <ul class="bullet-list">
+              <li>Aplicadas na <strong>fase de desenvolvimento</strong>.</li>
+              <li>Incidem sobre <strong>código-fonte, arquitetura e documentação</strong>.</li>
+              <li>Foco: avaliar o produto <strong>sem precisar executá-lo</strong>.</li>
+            </ul>
+            <span class="sub-label mono">// ATRIBUTOS AVALIADOS</span>
+            <div class="quad-tags big-tags">
+              <span class="tag-chip">Modularidade</span><span class="tag-chip">Complexidade do código</span>
+              <span class="tag-chip">Facilidade de análise</span><span class="tag-chip">Conformidade com padrões</span>
+            </div>
+          </div>
+          <div class="slide-visual-side">
+            <div class="code-analysis-card">
+              <div class="card-bar"><span class="mono card-title">pedido_service.py</span><span class="badge-lang mono">ANÁLISE ESTÁTICA</span></div>
+              <div class="code-snippet mono">
+                <div class="code-line"><span class="line-num">01</span> <span class="c-type">def</span> <span class="c-func">calcular_total</span>(pedido):</div>
+                <div class="code-line"><span class="line-num">02</span>   <span class="c-type">if</span> pedido.cliente.vip:</div>
+                <div class="code-line"><span class="line-num">03</span>     <span class="c-type">if</span> pedido.valor &gt; 1000:</div>
+                <div class="code-line"><span class="line-num">04</span>       <span class="c-type">for</span> item <span class="c-type">in</span> pedido.itens:</div>
+                <div class="code-line"><span class="line-num">05</span>         <span class="c-type">if</span> item.promo <span class="c-type">and</span> item.qtd &gt; 3: ...</div>
+                <div class="code-line"><span class="line-num">06</span>         <span class="c-type">elif</span> item.frete == <span class="c-comment">"expresso"</span>: ...</div>
+                <div class="code-line"><span class="line-num">07</span>   <span class="c-comment"># ... mais 40 linhas de ifs aninhados</span></div>
+              </div>
+              <div class="metric-panel mono">
+                <div class="mp-row"><span>Complexidade ciclomática (McCabe)</span><span class="mp-val bad" data-count="18">0</span></div>
+                <div class="mp-row"><span>Linhas de código por método</span><span class="mp-val warn" data-count="47">0</span></div>
+                <div class="mp-row"><span>Profundidade de aninhamento</span><span class="mp-val bad" data-count="4">0</span></div>
+                <div class="mp-row"><span>Alvo recomendado</span><span class="mp-val ok">≤ 10</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========================================== -->
+    <!-- SLIDE 3.3: MÉTRICAS EXTERNAS (PARTE 2)     -->
+    <!-- ========================================== -->
+    <section class="slide" data-slide="20" data-block="3" id="slide-20" data-title="3.3: Métricas Externas (Parte 2)">
+      <div class="slide-content">
+        <div class="split-layout">
+          <div class="slide-text-side">
+            <div class="section-tag mono"><span class="accent-dot"></span> 03.3 // MÉTRICAS EXTERNAS • ISO/IEC 9126-2</div>
+            <h2 class="slide-heading slim">Análise <span class="gradient-text">dinâmica</span>:<br>o sistema em ação</h2>
+            <ul class="bullet-list">
+              <li>Aplicadas com o sistema <strong>em execução</strong>: teste, homologação ou validação.</li>
+              <li>Foco: comportamento do software <strong>sob condições especificadas</strong>.</li>
+              <li>Medem <strong>tempo de resposta, consumo de CPU/RAM, contagem de falhas</strong> e comportamento sob carga.</li>
+            </ul>
+          </div>
+          <div class="slide-visual-side">
+            <div class="dash-card">
+              <div class="card-bar"><span class="mono card-title">🔴 teste_de_carga • 500 usuários simultâneos</span><span class="badge-lang mono">TELEMETRIA AO VIVO</span></div>
+              <div class="dash-body">
+                <div class="bar-row"><div class="bar-label mono"><span>Tempo de resposta</span><span>820 ms</span></div><div class="bar-track"><div class="bar-fill warn" data-w="82"></div></div></div>
+                <div class="bar-row"><div class="bar-label mono"><span>Uso de CPU</span><span>64 %</span></div><div class="bar-track"><div class="bar-fill" data-w="64"></div></div></div>
+                <div class="bar-row"><div class="bar-label mono"><span>Uso de RAM</span><span>1,8 GB</span></div><div class="bar-track"><div class="bar-fill warn" data-w="72"></div></div></div>
+                <div class="bar-row"><div class="bar-label mono"><span>Taxa de erro por requisição</span><span>12 / 1000</span></div><div class="bar-track"><div class="bar-fill bad" data-w="12"></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========================================== -->
+    <!-- SLIDE 3.4: QUALIDADE EM USO (PARTE 4)      -->
+    <!-- ========================================== -->
+    <section class="slide" data-slide="21" data-block="3" id="slide-21" data-title="3.4: Qualidade em Uso (Parte 4)">
+      <div class="slide-content">
+        <div class="slide-top-header">
+          <div class="section-tag mono"><span class="accent-dot"></span> 03.4 // QUALIDADE EM USO • ISO/IEC 9126-4</div>
+          <h2 class="slide-heading slim">A qualidade <span class="gradient-text">na visão do usuário</span></h2>
+          <p class="slide-lead">Avalia a qualidade percebida ao realizar <strong>tarefas reais</strong>: o efeito combinado das seis características no ambiente real do cliente.</p>
+        </div>
+        <div class="uso-grid">
+          <article class="char-card c-frost uso-card">
+            <div class="uso-num mono">01</div>
+            <div class="char-icon">🎯</div>
+            <h3 class="char-name">Eficácia</h3>
+            <p class="char-def">Mede se os usuários conseguem atingir suas metas com <strong>precisão e completitude</strong>.</p>
+          </article>
+          <article class="char-card c-teal uso-card">
+            <div class="uso-num mono">02</div>
+            <div class="char-icon">⏱️</div>
+            <h3 class="char-name">Produtividade</h3>
+            <p class="char-def">Avalia os recursos empregados (como <strong>tempo e esforço</strong>) em relação à eficácia obtida.</p>
+          </article>
+          <article class="char-card c-aurora uso-card">
+            <div class="uso-num mono">03</div>
+            <div class="char-icon">🦺</div>
+            <h3 class="char-name">Segurança</h3>
+            <p class="char-def">Garante níveis aceitáveis de <strong>mitigação de riscos</strong> a pessoas, dados ou negócios no contexto de uso.</p>
+          </article>
+          <article class="char-card c-green uso-card">
+            <div class="uso-num mono">04</div>
+            <div class="char-icon">😊</div>
+            <h3 class="char-name">Satisfação</h3>
+            <p class="char-def">Mede o grau de <strong>satisfação, conforto e aceitação</strong> dos usuários ao interagir com o produto.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- ========================================== -->
+    <!-- SLIDE 4.1: O QUE É O SONARQUBE?            -->
+    <!-- ========================================== -->
+    <section class="slide" data-slide="22" data-block="4" id="slide-22" data-title="4.1: O que é o SonarQube?">
+      <div class="slide-content">
+        <div class="slide-top-header">
+          <div class="section-tag mono"><span class="accent-dot"></span> 04.1 // O QUE É O SONARQUBE?</div>
+          <h2 class="slide-heading slim">SonarQube: <span class="gradient-text">inspeção contínua da qualidade do código</span></h2>
+          <p class="slide-lead tight">Plataforma líder da <strong>SonarSource</strong> (com edição Community open-source) que realiza <strong>análise estática</strong> do código-fonte, sem executá-lo, interceptando problemas antes que alcancem produção.</p>
+        </div>
+
+        <!-- Pipeline do SonarQube -->
+        <div class="tool-pipeline">
+          <div class="tp-node">
+            <span class="tp-ic">💻</span>
+            <strong>Código-Fonte</strong>
+            <span class="mono">30+ linguagens (Java, JS, Python, C#)</span>
+          </div>
+          <div class="metric-arrow">➜</div>
+          <div class="tp-node">
+            <span class="tp-ic">🔎</span>
+            <strong>SonarScanner</strong>
+            <span class="mono">analisa a cada commit / pipeline CI</span>
+          </div>
+          <div class="metric-arrow">➜</div>
+          <div class="tp-node">
+            <span class="tp-ic">🗄️</span>
+            <strong>Servidor SonarQube</strong>
+            <span class="mono">computa métricas e histórico</span>
+          </div>
+          <div class="metric-arrow">➜</div>
+          <div class="tp-node">
+            <span class="tp-ic">🚦</span>
+            <strong>Quality Gate</strong>
+            <span class="mono">Aprovado (Pass) / Reprovado (Fail)</span>
+          </div>
+        </div>
+
+        <!-- 4 Pilares avaliados -->
+        <div class="tool-cards">
+          <div class="tool-card c-aurora">
+            <span class="tc-ic">🐞</span>
+            <h4>Bugs</h4>
+            <p>Erros lógicos no código com potencial direto de derrubar a aplicação.</p>
+            <span class="tc-iso mono">→ Confiabilidade</span>
+          </div>
+          <div class="tool-card c-frost">
+            <span class="tc-ic">🔓</span>
+            <h4>Vulnerabilidades</h4>
+            <p>Brechas de segurança exploráveis (ex.: SQL Injection, XSS, credenciais expostas).</p>
+            <span class="tc-iso mono">→ Segurança</span>
+          </div>
+          <div class="tool-card c-purple">
+            <span class="tc-ic">👃</span>
+            <h4>Code Smells</h4>
+            <p>Código confuso, duplicado ou mal projetado que gera <strong>dívida técnica</strong>.</p>
+            <span class="tc-iso mono">→ Manutenibilidade</span>
+          </div>
+          <div class="tool-card c-teal">
+            <span class="tc-ic">📋</span>
+            <h4>Cobertura &amp; Duplicações</h4>
+            <p>Percentual do código coberto por testes automatizados e blocos clonados.</p>
+            <span class="tc-iso mono">→ Testabilidade</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========================================== -->
+    <!-- SLIDE 4.2: SONARQUBE                       -->
+    <!-- ========================================== -->
+    <section class="slide" data-slide="23" data-block="4" id="slide-23" data-title="4.2: SonarQube (Relatório Executivo &amp; Análise Estática)">
+      <div class="slide-content tool-layout">
+        <div class="tool-shot shot-portrait">
+          <div class="tool-window">
+            <div class="card-bar"><span class="mono card-title">🔍 SonarQube • Executive Report</span><span class="badge-lang mono">WEBGOAT</span></div>
+            <img class="zoomable" src="assets/images/sonarcube_report.png" alt="Relatório executivo do SonarQube para o projeto WebGoat" title="Clique para ampliar">
+          </div>
+          <span class="shot-hint mono">🔎 clique na imagem para ampliar • relatório de 12.009 LOC</span>
+        </div>
+        <div class="tool-info">
+          <div class="section-tag mono"><span class="accent-dot"></span> 04.2 // SONARQUBE • MÉTRICAS INTERNAS</div>
+          <h2 class="slide-heading slim">Radiografia do código: <span class="gradient-text">Code Smells &amp; Dívida Técnica</span></h2>
+          <p class="slide-lead tight">Inspeção contínua e análise estática do código-fonte, mapeando diretamente a <strong>Manutenibilidade</strong> da ISO 9126.</p>
+          <div class="kpi-grid">
+            <div class="kpi"><span class="kpi-num mono warn" data-count="595">0</span><span class="kpi-label">Code Smells</span></div>
+            <div class="kpi"><span class="kpi-num mono ok">0,8%</span><span class="kpi-label">Dívida Técnica (Debt Ratio)</span></div>
+            <div class="kpi"><span class="kpi-num mono bad" data-count="23">0</span><span class="kpi-label">Bugs (Confiabilidade E)</span></div>
+            <div class="kpi"><span class="kpi-num mono bad" data-count="42">0</span><span class="kpi-label">Vulnerabilidades (Segurança E)</span></div>
+          </div>
+          <div class="gate-row">
+            <span class="gate-badge mono">QUALITY GATE: FAILED</span>
+            <span class="gate-text">Manutenibilidade <strong class="ok">A</strong>, mas Confiabilidade e Segurança <strong class="bad">E</strong>: <em>uma nota boa não compensa falhas críticas.</em></span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========================================== -->
+    <!-- SLIDE 4.2: PRÁTICA: SONARQUBE AO VIVO      -->
+    <!-- ========================================== -->
+    <section class="slide" data-slide="24" data-block="4" id="slide-24" data-title="4.3: PRÁTICA: SonarQube ao vivo">
+      <div class="slide-content practice-layout">
+        <div class="practice-glow"></div>
+        <span class="practice-tag mono"><span class="prompt-sym">&gt;</span> sonar-scanner --live-demo<span class="blink">_</span></span>
+        <h1 class="practice-title">PRÁTICA</h1>
+        <p class="slide-lead tight" style="margin-top: 1.5rem; text-align: center; color: var(--nord4); max-width: 680px;">
+          Demonstração ao vivo no terminal e navegador: inspecionando uma aplicação real, identificando <strong>Code Smells</strong>, <strong>Bugs</strong> e avaliando o <strong>Quality Gate</strong> na prática.
+        </p>
+      </div>
+    </section>
+    <!-- ========================================== -->
+    <!-- SLIDE 4.3: TESTLINK                        -->
+    <!-- ========================================== -->
+    <section class="slide" data-slide="25" data-block="4" id="slide-25" data-title="4.4: TestLink (Gestão e Execução de Testes)">
+      <div class="slide-content tool-layout wide">
+        <div class="tool-info">
+          <div class="section-tag mono"><span class="accent-dot"></span> 04.4 // TESTLINK • MÉTRICAS EXTERNAS</div>
+          <h2 class="slide-heading slim">Gestão de testes: <span class="gradient-text">sucessos e falhas</span> em execução</h2>
+          <p class="slide-lead tight">Planeja casos de teste, gerencia builds e audita execuções — alinhado às métricas de <strong>Confiabilidade</strong>.</p>
+          <div class="test-tree mono">
+            <div class="tt-title">📁 Portal Acadêmico <span class="tt-sum">6 casos • 4 ✔ • 2 ✘ (exemplo)</span></div>
+            <div class="tt-item pass">├─ ✔ TC-01 Login com credenciais válidas</div>
+            <div class="tt-item pass">├─ ✔ TC-02 Consulta de notas e faltas</div>
+            <div class="tt-item fail">├─ ✘ TC-03 Envio de trabalho às 23:58 (timeout)</div>
+            <div class="tt-item pass">├─ ✔ TC-04 Recuperação de senha por e-mail</div>
+            <div class="tt-item pass">├─ ✔ TC-05 Download de histórico em PDF</div>
+            <div class="tt-item fail">└─ ✘ TC-06 Carga simultânea de 500 alunos</div>
+            <div class="tt-bar"><div class="tt-pass" style="width:66%"></div><div class="tt-fail" style="width:34%"></div></div>
+          </div>
+        </div>
+        <div class="tool-shot">
+          <div class="tool-window">
+            <div class="card-bar"><span class="mono card-title">🧪 TestLink 1.9.4 • Test Execution</span><span class="badge-lang mono">DASHBOARD</span></div>
+            <img class="zoomable" src="assets/images/testlink.jpeg" alt="Tela inicial do TestLink 1.9.4" title="Clique para ampliar">
+          </div>
+          <div class="legacy-card" style="margin-top:0.6rem; padding: 0.8rem 1rem;">
+            <span class="legacy-badge mono">⚠️ FERRAMENTA LEGADA</span>
+            <p style="font-size:0.82rem; margin:0;">
+              Software antigo e <strong>sem novas atualizações</strong>. Ideal para fixar conceitos acadêmicos de planos e suítes, mas superado no mercado por soluções como <strong>Xray, TestRail e Zephyr</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========================================== -->
+    <!-- SLIDE 4.3: CHECKLIST INTERATIVO            -->
+    <!-- ========================================== -->
+    <section class="slide" data-slide="26" data-block="4" id="slide-26" data-title="4.5: Checklist Interativo de Qualidade em Uso">
+      <div class="slide-content">
+        <div class="slide-top-header">
+          <div class="section-tag mono"><span class="accent-dot"></span> 04.5 // CHECKLIST • QUALIDADE EM USO • INTERATIVO</div>
+          <h2 class="slide-heading slim">Avaliando <span class="gradient-text">ao vivo</span> com a turma</h2>
+          <p class="slide-lead tight">Sistema avaliado: <input id="chkSystem" class="chk-input mono" value="Portal Acadêmico" aria-label="Nome do sistema avaliado"> Respondam <strong>Sim</strong> ou <strong>Não</strong> a cada critério de Usabilidade da ISO 9126:</p>
+        </div>
+        <div class="chk-layout">
+          <div class="chk-list" id="chkList">
+            <div class="chk-item" data-answer="">
+              <div class="chk-text"><span class="chk-sub mono">01 • Inteligibilidade</span><span class="chk-q">É fácil entender para que serve o sistema logo na primeira tela?</span></div>
+              <div class="chk-actions"><button class="chk-btn yes" data-val="yes">Sim</button><button class="chk-btn no" data-val="no">Não</button></div>
+            </div>
+            <div class="chk-item" data-answer="">
+              <div class="chk-text"><span class="chk-sub mono">02 • Apreensibilidade</span><span class="chk-q">Um usuário novo aprende a usar sem precisar de treinamento ou manual?</span></div>
+              <div class="chk-actions"><button class="chk-btn yes" data-val="yes">Sim</button><button class="chk-btn no" data-val="no">Não</button></div>
+            </div>
+            <div class="chk-item" data-answer="">
+              <div class="chk-text"><span class="chk-sub mono">03 • Operacionalidade</span><span class="chk-q">As tarefas principais são concluídas com poucos cliques e navegação fluida?</span></div>
+              <div class="chk-actions"><button class="chk-btn yes" data-val="yes">Sim</button><button class="chk-btn no" data-val="no">Não</button></div>
+            </div>
+            <div class="chk-item" data-answer="">
+              <div class="chk-text"><span class="chk-sub mono">04 • Proteção frente a erros</span><span class="chk-q">O sistema previne erros e pede confirmação antes de ações destrutivas?</span></div>
+              <div class="chk-actions"><button class="chk-btn yes" data-val="yes">Sim</button><button class="chk-btn no" data-val="no">Não</button></div>
+            </div>
+            <div class="chk-item" data-answer="">
+              <div class="chk-text"><span class="chk-sub mono">05 • Estética / Atratividade</span><span class="chk-q">A interface é visualmente agradável, limpa e consistente?</span></div>
+              <div class="chk-actions"><button class="chk-btn yes" data-val="yes">Sim</button><button class="chk-btn no" data-val="no">Não</button></div>
+            </div>
+            <div class="chk-item" data-answer="">
+              <div class="chk-text"><span class="chk-sub mono">06 • Acessibilidade</span><span class="chk-q">É possível usar totalmente com teclado e possui bom contraste de leitura?</span></div>
+              <div class="chk-actions"><button class="chk-btn yes" data-val="yes">Sim</button><button class="chk-btn no" data-val="no">Não</button></div>
+            </div>
+          </div>
+          <aside class="chk-score">
+            <span class="sub-label mono">// RESULTADO AO VIVO</span>
+            <div class="chk-ring" id="chkRing"><span class="chk-pct mono" id="chkPct">0%</span></div>
+            <div class="chk-count mono"><span id="chkYes">0</span> sim • <span id="chkNo">0</span> não • <span id="chkLeft">6</span> pendentes</div>
+            <p class="chk-verdict" id="chkVerdict">Aguardando respostas…</p>
+            <button class="poll-button-reset chk-reset" id="chkReset">↺ Reiniciar checklist</button>
+          </aside>
+        </div>
+      </div>
+    </section>
+    <!-- ========================================== -->
+    <!-- SLIDE 5.1: A BATALHA (CHROME VS FIREFOX)   -->
+    <!-- ========================================== -->
+    <section class="slide" data-slide="27" data-block="5" id="slide-27" data-title="5.1: A Batalha (Chrome vs. Firefox)">
+      <div class="slide-content">
+        <div class="slide-top-header">
+          <div class="section-tag mono"><span class="accent-dot danger"></span> 05.1 // A BATALHA DOS NAVEGADORES</div>
+          <h2 class="slide-heading slim">Chrome <span class="vs-badge mono">VS</span> Firefox: <span class="gradient-text">quem tem mais qualidade?</span></h2>
+        </div>
+        <div class="battle-wrap">
+          <table class="battle-table">
+            <thead>
+              <tr><th>Característica ISO 9126</th>
+                <th><span class="br-logo chrome-logo"></span> Google Chrome</th>
+                <th><span class="br-logo">🦊</span> Mozilla Firefox</th></tr>
+            </thead>
+            <tbody>
+              <tr class="step"><td class="bt-crit"><strong>Funcionalidade</strong><span class="mono">Adequação • Acurácia • Segurança</span></td><td>Ecossistema enorme de extensões, DevTools e integração com ecossistema Google.</td><td>Extensões completas, DevTools avançado e contêineres nativos de privacidade.</td></tr>
+              <tr class="step"><td class="bt-crit"><strong>Confiabilidade</strong><span class="mono">Maturidade • Tolerância a falhas</span></td><td>Isolamento rígido de processos por aba; se uma falha, as outras permanecem vivas.</td><td>Arquitetura multiprocesso estável com excelente recuperação pós-crash.</td></tr>
+              <tr class="step"><td class="bt-crit"><strong>Usabilidade</strong><span class="mono">Operacionalidade • Estética</span></td><td>Interface limpa, minimalista e sincronização instantânea em múltiplos dispositivos.</td><td>Interface amplamente personalizável, modo leitura nativo e forte apelo ao usuário.</td></tr>
+              <tr class="step"><td class="bt-crit"><strong>Eficiência</strong><span class="mono">Tempo de resposta • Recursos</span></td><td>Motor V8 ultra veloz para JavaScript, mas consumo de memória RAM tradicionalmente alto.</td><td>Motor SpiderMonkey moderno, eficiente sob abas pesadas; <em>meça, não presuma!</em></td></tr>
+              <tr class="step"><td class="bt-crit"><strong>Manutenibilidade</strong><span class="mono">Analisabilidade • Modificabilidade</span></td><td>Base de código aberto (Chromium) mantida pelo Google com ciclos rápidos de release.</td><td>Código aberto (MPL) mantido pela comunidade Mozilla e padrões estritos de governança.</td></tr>
+              <tr class="step"><td class="bt-crit"><strong>Portabilidade</strong><span class="mono">Adaptabilidade • Instalação</span></td><td>Disponível em Windows, macOS, Linux, Android e iOS com paridade de recursos.</td><td>Altamente portável em todas as plataformas desktop e mobile.</td></tr>
+            </tbody>
+          </table>
+          <div class="step-hint mono" id="stepHint">▸ Pressione <kbd class="key-hint">→</kbd> para revelar cada critério (pontos de partida para o debate)</div>
+        </div>
+      </div>
+    </section>
+    <!-- ========================================== -->
+    <!-- SLIDE 5.2: VOTAÇÃO INTERATIVA (MENTIMETER) -->
+    <!-- ========================================== -->
+    <section class="slide" data-slide="28" data-block="5" id="slide-28" data-title="5.2: Votação Interativa da Turma">
+      <div class="slide-content">
+        <div class="split-layout vote-split">
+          <div class="slide-text-side">
+            <div class="section-tag mono"><span class="accent-dot"></span> 05.2 // AVALIAÇÃO INTERATIVA • MENTIMETER</div>
+            <h2 class="slide-heading slim">Agora é com <span class="gradient-text">vocês!</span></h2>
+            <p class="slide-lead tight">Escaneiem o QR Code e atribuam notas de <strong>0 a 10</strong> para cada navegador nos critérios da norma.</p>
+            <div class="qr-box">
+              <div class="qr-grid" id="qrGrid" aria-label="QR Code ilustrativo"></div>
+              <div class="qr-info">
+                <span class="mono qr-label">ENTRE EM</span>
+                <span class="qr-url mono">menti.com</span>
+                <span class="mono qr-label">COM O CÓDIGO</span>
+                <input class="chk-input mono qr-code" value="0000 0000" aria-label="Código do Mentimeter">
+                <span class="qr-note mono">QR ilustrativo: insira o código real do seu Mentimeter</span>
+              </div>
+            </div>
+          </div>
+          <div class="vote-panel">
+            <div class="card-bar"><span class="mono card-title">📊 Notas da turma (média, 0–10)</span>
+              <span><button class="tag-chip vt-sim" id="voteSim">🎲 Simular votos</button> <button class="tag-chip vt-sim" id="voteReset">↺ Zerar</button></span></div>
+            <div class="vote-body">
+              <div class="vote-row" data-crit="efi">
+                <div class="vr-title"><span class="vr-icon">⚡</span><div><strong>Eficiência</strong><span class="mono">Velocidade e consumo de RAM</span></div></div>
+                <div class="vr-side chrome"><span class="vr-name mono">Chrome</span>
+                  <button class="vt-btn" data-br="0" data-d="-0.5">−</button><span class="vr-val mono" id="v-efi-0">0.0</span><button class="vt-btn" data-br="0" data-d="0.5">+</button>
+                  <div class="vr-bar"><div class="vr-fill" id="b-efi-0"></div></div></div>
+                <div class="vr-side firefox"><span class="vr-name mono">Firefox</span>
+                  <button class="vt-btn" data-br="1" data-d="-0.5">−</button><span class="vr-val mono" id="v-efi-1">0.0</span><button class="vt-btn" data-br="1" data-d="0.5">+</button>
+                  <div class="vr-bar"><div class="vr-fill" id="b-efi-1"></div></div></div>
+              </div>
+              <div class="vote-row" data-crit="fun">
+                <div class="vr-title"><span class="vr-icon">🎯</span><div><strong>Funcionalidade</strong><span class="mono">Recursos, extensões e segurança</span></div></div>
+                <div class="vr-side chrome"><span class="vr-name mono">Chrome</span>
+                  <button class="vt-btn" data-br="0" data-d="-0.5">−</button><span class="vr-val mono" id="v-fun-0">0.0</span><button class="vt-btn" data-br="0" data-d="0.5">+</button>
+                  <div class="vr-bar"><div class="vr-fill" id="b-fun-0"></div></div></div>
+                <div class="vr-side firefox"><span class="vr-name mono">Firefox</span>
+                  <button class="vt-btn" data-br="1" data-d="-0.5">−</button><span class="vr-val mono" id="v-fun-1">0.0</span><button class="vt-btn" data-br="1" data-d="0.5">+</button>
+                  <div class="vr-bar"><div class="vr-fill" id="b-fun-1"></div></div></div>
+              </div>
+              <div class="vote-row" data-crit="usa">
+                <div class="vr-title"><span class="vr-icon">🧭</span><div><strong>Usabilidade</strong><span class="mono">Facilidade de uso e conforto</span></div></div>
+                <div class="vr-side chrome"><span class="vr-name mono">Chrome</span>
+                  <button class="vt-btn" data-br="0" data-d="-0.5">−</button><span class="vr-val mono" id="v-usa-0">0.0</span><button class="vt-btn" data-br="0" data-d="0.5">+</button>
+                  <div class="vr-bar"><div class="vr-fill" id="b-usa-0"></div></div></div>
+                <div class="vr-side firefox"><span class="vr-name mono">Firefox</span>
+                  <button class="vt-btn" data-br="1" data-d="-0.5">−</button><span class="vr-val mono" id="v-usa-1">0.0</span><button class="vt-btn" data-br="1" data-d="0.5">+</button>
+                  <div class="vr-bar"><div class="vr-fill" id="b-usa-1"></div></div></div>
+              </div>
+            </div>
+            <div class="vote-foot mono">Use − / + para lançar as médias coletadas pelo Mentimeter ao vivo.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========================================== -->
+    <!-- SLIDE 5.3: CONCLUSÃO & VEREDITO FINAL      -->
+    <!-- ========================================== -->
+    <section class="slide" data-slide="29" data-block="5" id="slide-29" data-title="5.3: Conclusão e Veredito Final">
+      <div class="slide-content">
+        <div class="slide-top-header">
+          <div class="section-tag mono"><span class="accent-dot"></span> 05.3 // CONCLUSÃO &amp; ENCERRAMENTO</div>
+          <h2 class="slide-heading slim">O Veredito segundo a <span class="gradient-text">ISO/IEC 9126</span></h2>
+        </div>
+        <div class="concl-grid">
+          <div class="winner-card" id="winnerCard">
+            <span class="mono sub-label">// RESULTADO FINAL DA TURMA</span>
+            <div class="winner-name" id="winnerName">Aguardando votação…</div>
+            <div class="winner-score mono" id="winnerScore">Lance as notas no slide 5.2</div>
+            <div class="score-rows" id="scoreRows"></div>
+          </div>
+          <div class="take-grid">
+            <div class="take-card"><span class="take-ic">🧩</span><h4>Não há vencedor absoluto</h4><p>A melhor escolha técnica depende estritamente do <strong>contexto de uso</strong> e dos trade-offs aceitáveis.</p></div>
+            <div class="take-card"><span class="take-ic">📏</span><h4>Meça, não presuma</h4><p>Qualidade é fundamentada nas <strong>3 visões</strong>: estática no código, dinâmica no runtime e perceptiva no usuário.</p></div>
+            <div class="take-card"><span class="take-ic">🗣️</span><h4>Linguagem unificada</h4><p>A norma fornece o <strong>vocabulário formal</strong> para engenheiros, líderes e clientes alinharem expectativas.</p></div>
+            <div class="take-card"><span class="take-ic">🚀</span><h4>Evolução contínua</h4><p>O legado da ISO 9126 vive na <strong>ISO/IEC 25010</strong>: qualidade é disciplina diária de engenharia.</p></div>
+          </div>
+        </div>
+        <div class="next-block-teaser">
+          <div class="teaser-left"><span class="teaser-badge mono">ETAPA FINAL</span><span class="teaser-title">Sessão aberta de dúvidas e debate com a sala</span></div>
+          <button class="teaser-btn" onclick="goToSlide(30)"><span>Abrir Perguntas (Q&amp;A)</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-inline"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
+        </div>
+      </div>
+    </section>
+    <!-- ========================================== -->
+    <!-- SLIDE 5.4: DÚVIDAS & PERGUNTAS (Q&A)       -->
+    <!-- ========================================== -->
+    <section class="slide" data-slide="30" data-block="5" id="slide-30" data-title="5.4: Dúvidas e Perguntas (Q&amp;A)">
+      <div class="slide-content">
+        <div class="qa-top">
+          <div>
+            <div class="section-tag mono"><span class="accent-dot"></span> 05.4 // DÚVIDAS &amp; DEBATE</div>
+            <h2 class="slide-heading slim">Perguntas da Turma? <span class="gradient-text">Mandem ver!</span></h2>
+          </div>
+          <button class="poll-button qa-random" id="qaRandom">🎲 Sortear pergunta</button>
+        </div>
+        <div class="qa-tabs">
+          <button class="qa-tab active" data-cat="0">Conceitos</button>
+          <button class="qa-tab" data-cat="1">Modelo 9126-1</button>
+          <button class="qa-tab" data-cat="2">Métricas</button>
+          <button class="qa-tab" data-cat="3">Ferramentas</button>
+        </div>
+        <div class="qa-panels">
+          <div class="qa-panel active" data-cat="0">
+            <div class="qa-card"><button class="qa-q"><span class="qa-n mono">Q1</span><span>Qual a diferença entre qualidade de processo e qualidade de produto?</span><span class="qa-chev">▾</span></button><div class="qa-a">Processo é <em>como</em> desenvolvemos (ex.: CMMI, MPS.BR, ISO 12207). Produto é <em>o que</em> entregamos ao final, que é o foco da ISO 9126.</div></div>
+            <div class="qa-card"><button class="qa-q"><span class="qa-n mono">Q2</span><span>Por que o Ariane 5 falhou, sob a ótica da ISO 9126?</span><span class="qa-chev">▾</span></button><div class="qa-a">Reaproveitamento de software do Ariane 4 sem revalidação em novas condições (falha de Portabilidade) e exceção de overflow não tratada (falha de Confiabilidade / Tolerância a falhas).</div></div>
+            <div class="qa-card"><button class="qa-q"><span class="qa-n mono">Q3</span><span>A ISO 9126 ainda é válida se foi substituída pela 25010?</span><span class="qa-chev">▾</span></button><div class="qa-a">Sim. A ISO/IEC 25010 (SQuaRE) é sua sucessora direta e manteve praticamente intacta a base conceitual dos 6 pilares, elevando Segurança e Compatibilidade a características de primeiro nível.</div></div>
+            <div class="qa-card"><button class="qa-q"><span class="qa-n mono">Q4</span><span>Qualidade de software se resume a não ter bugs?</span><span class="qa-chev">▾</span></button><div class="qa-a">Não! Um sistema sem bugs aparentes pode ser incrivelmente lento (baixa Eficiência), impossível de navegar (baixa Usabilidade) ou um pesadelo para refatorar (baixa Manutenibilidade).</div></div>
+          </div>
+          <div class="qa-panel" data-cat="1">
+            <div class="qa-card"><button class="qa-q"><span class="qa-n mono">Q1</span><span>Qual a diferença prática entre Funcionalidade e Usabilidade?</span><span class="qa-chev">▾</span></button><div class="qa-a">Funcionalidade responde se o sistema <em>faz</em> o que deve. Usabilidade avalia se o usuário <em>consegue</em> operar e concluir tarefas com facilidade, clareza e conforto.</div></div>
+            <div class="qa-card"><button class="qa-q"><span class="qa-n mono">Q2</span><span>Onde fica a Segurança na norma ISO 9126?</span><span class="qa-chev">▾</span></button><div class="qa-a">Na ISO 9126-1 ela foi classificada como subcaracterística de Funcionalidade. Com a evolução das ameaças cibernéticas, a ISO 25010 a promoveu a característica principal independente.</div></div>
+            <div class="qa-card"><button class="qa-q"><span class="qa-n mono">Q3</span><span>O que significa a subcaracterística "Conformidade"?</span><span class="qa-chev">▾</span></button><div class="qa-a">Representa a aderência do software a leis, normas do setor, regulamentações (ex: LGPD/GDPR) e padrões de projeto aplicáveis àquela característica específica.</div></div>
+            <div class="qa-card"><button class="qa-q"><span class="qa-n mono">Q4</span><span>É possível maximizar todas as 6 características simultaneamente?</span><span class="qa-chev">▾</span></button><div class="qa-a">Raramente. Na engenharia de software existem trade-offs clássicos: otimizar Eficiência extrema (ex: micro-otimizações em assembly) costuma degradar Manutenibilidade e Portabilidade.</div></div>
+          </div>
+          <div class="qa-panel" data-cat="2">
+            <div class="qa-card"><button class="qa-q"><span class="qa-n mono">Q1</span><span>Quando aplicar métricas internas e quando aplicar externas?</span><span class="qa-chev">▾</span></button><div class="qa-a">Métricas internas durante a codificação (análise estática sem rodar). Métricas externas na fase de testes integrados e homologação (análise dinâmica com o sistema executando).</div></div>
+            <div class="qa-card"><button class="qa-q"><span class="qa-n mono">Q2</span><span>Complexidade Ciclomática de 18 é considerada alta?</span><span class="qa-chev">▾</span></button><div class="qa-a">Sim. A literatura técnica (McCabe) recomenda valores até 10 como saudáveis. Um valor de 18 indica código com muitos caminhos condicionais e difícil de testar e manter.</div></div>
+            <div class="qa-card"><button class="qa-q"><span class="qa-n mono">Q3</span><span>Métrica interna boa garante que o software será aprovado pelo usuário?</span><span class="qa-chev">▾</span></button><div class="qa-a">Não necessariamente. O código pode ser perfeito, mas o sistema ter uma interface confusa ou não atender à real necessidade de negócio. Daí a importância da Parte 4 (Qualidade em Uso).</div></div>
+            <div class="qa-card"><button class="qa-q"><span class="qa-n mono">Q4</span><span>Como quantificar a Satisfação do usuário de forma confiável?</span><span class="qa-chev">▾</span></button><div class="qa-a">Utilizando instrumentos validados pela engenharia e pela ergonomia, como o questionário SUS (System Usability Scale), métricas de NPS e taxas de conclusão em testes de usabilidade.</div></div>
+          </div>
+          <div class="qa-panel" data-cat="3">
+            <div class="qa-card"><button class="qa-q"><span class="qa-n mono">Q1</span><span>O SonarQube substitui os testes automatizados?</span><span class="qa-chev">▾</span></button><div class="qa-a">Não! O SonarQube faz análise estática. Inclusive, o indicador de Cobertura (Coverage) de 0% alerta que não existem testes exercitando o código. Ele audita, mas não cria testes.</div></div>
+            <div class="qa-card"><button class="qa-q"><span class="qa-n mono">Q2</span><span>Por que o Quality Gate reprovou com Manutenibilidade A?</span><span class="qa-chev">▾</span></button><div class="qa-a">Porque o Quality Gate avalia condições críticas mínimas: ter 42 vulnerabilidades e 23 bugs reprova a liberação, pois uma nota boa em manutenção não protege contra falhas graves.</div></div>
+            <div class="qa-card"><button class="qa-q"><span class="qa-n mono">Q3</span><span>O TestLink roda os testes de forma automática?</span><span class="qa-chev">▾</span></button><div class="qa-a">Originalmente o TestLink foi projetado para gestão manual de casos de teste, suítes e planos. Automações modernas exigem integrações com frameworks como Selenium, Cypress ou JUnit.</div></div>
+            <div class="qa-card"><button class="qa-q"><span class="qa-n mono">Q4</span><span>Qual o risco de uma base de código com 0% de cobertura de testes?</span><span class="qa-chev">▾</span></button><div class="qa-a">Qualquer refatoração ou correção de bug se torna uma aposta de alto risco de regressão: sem testes automatizados, é impossível garantir que o sistema não quebrará.</div></div>
+          </div>
+        </div>
+        <div class="qa-foot mono">Clique em qualquer pergunta para ver a resposta detalhada.</div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <!-- Barra de Controle Inferior -->
+  <footer class="presentation-footer">
+    <div class="footer-left">
+      <div class="slide-counter mono">
+        <span class="current-slide" id="currentSlideNum">01</span>
+        <span class="separator">/</span>
+        <span class="total-slides" id="totalSlidesNum">30</span>
+      </div>
+      <div class="slide-title-preview" id="slideTitlePreview">
+        1.1: Capa (Qualidade de Software)
+      </div>
+    </div>
+
+                    <!-- Navegação de Slides em Miniatura (Dots) -->
+    <div class="slide-dots" id="slideDots">
+      <button class="dot-btn active" data-goto="1" title="Slide 1"></button>
+      <button class="dot-btn" data-goto="2" title="Slide 2"></button>
+      <button class="dot-btn" data-goto="3" title="Slide 3"></button>
+      <button class="dot-btn" data-goto="4" title="Slide 4"></button>
+      <button class="dot-btn" data-goto="5" title="Slide 5"></button>
+      <button class="dot-btn" data-goto="6" title="Slide 6"></button>
+      <button class="dot-btn" data-goto="7" title="Slide 7"></button>
+      <button class="dot-btn" data-goto="8" title="Slide 8"></button>
+      <button class="dot-btn" data-goto="9" title="Slide 9"></button>
+      <button class="dot-btn" data-goto="10" title="Slide 10"></button>
+      <button class="dot-btn" data-goto="11" title="Slide 11"></button>
+      <button class="dot-btn" data-goto="12" title="Slide 12"></button>
+      <button class="dot-btn" data-goto="13" title="Slide 13"></button>
+      <button class="dot-btn" data-goto="14" title="Slide 14"></button>
+      <button class="dot-btn" data-goto="15" title="Slide 15"></button>
+      <button class="dot-btn" data-goto="16" title="Slide 16"></button>
+      <button class="dot-btn" data-goto="17" title="Slide 17"></button>
+      <button class="dot-btn" data-goto="18" title="Slide 18"></button>
+      <button class="dot-btn" data-goto="19" title="Slide 19"></button>
+      <button class="dot-btn" data-goto="20" title="Slide 20"></button>
+      <button class="dot-btn" data-goto="21" title="Slide 21"></button>
+      <button class="dot-btn" data-goto="22" title="Slide 22"></button>
+      <button class="dot-btn" data-goto="23" title="Slide 23"></button>
+      <button class="dot-btn" data-goto="24" title="Slide 24"></button>
+      <button class="dot-btn" data-goto="25" title="Slide 25"></button>
+      <button class="dot-btn" data-goto="26" title="Slide 26"></button>
+      <button class="dot-btn" data-goto="27" title="Slide 27"></button>
+      <button class="dot-btn" data-goto="28" title="Slide 28"></button>
+      <button class="dot-btn" data-goto="29" title="Slide 29"></button>
+      <button class="dot-btn" data-goto="30" title="Slide 30"></button>
+    </div>
+
+    <div class="footer-right">
+      <div class="nav-controls">
+        <button class="nav-btn" id="btnPrev" title="Slide Anterior (Seta Esquerda)">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+          <span class="btn-text">Anterior</span>
+        </button>
+        <button class="nav-btn primary" id="btnNext" title="Próximo Slide (Seta Direita / Espaço)">
+          <span class="btn-text">Avançar</span>
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal de Ajuda / Atalhos -->
+  <div class="modal-overlay" id="helpModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title mono">// ATALHOS DE TECLADO</h3>
+        <button class="modal-close" id="btnCloseHelp">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="shortcut-row">
+          <span class="keys"><kbd>→</kbd> ou <kbd>Espaço</kbd> ou <kbd>PageDown</kbd></span>
+          <span class="action">Próximo Slide / Próximo Passo</span>
+        </div>
+        <div class="shortcut-row">
+          <span class="keys"><kbd>←</kbd> ou <kbd>Backspace</kbd> ou <kbd>PageUp</kbd></span>
+          <span class="action">Slide Anterior</span>
+        </div>
+        <div class="shortcut-row">
+          <span class="keys"><kbd>F</kbd></span>
+          <span class="action">Alternar Modo Tela Cheia</span>
+        </div>
+        <div class="shortcut-row">
+          <span class="keys"><kbd>Home</kbd> / <kbd>End</kbd></span>
+          <span class="action">Primeiro / Último Slide</span>
+        </div>
+        <div class="shortcut-row">
+          <span class="keys"><kbd>T</kbd></span>
+          <span class="action">Zerar / Reiniciar Cronômetro</span>
+        </div>
+        <div class="shortcut-row">
+          <span class="keys"><kbd>1</kbd>–<kbd>6</kbd></span>
+          <span class="action">Ir para Bloco (1: B1, 2: B2, 3: Tribunal, 4: B3, 5: B4, 6: B5)</span>
+        </div>
+        <div class="shortcut-row">
+          <span class="keys"><kbd>?</kbd></span>
+          <span class="action">Abrir este painel de ajuda</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox para Imagens (SonarQube e TestLink) -->
+  <div class="img-lightbox" id="lightbox">
+    <img id="lightboxImg" alt="Imagem ampliada">
+  </div>
+
+  <!-- Modal Spot para Sorteio de Perguntas -->
+  <div class="spot-overlay" id="spot">
+    <div class="spot-card">
+      <span class="mono sub-label" id="spotCat"></span>
+      <h3 class="spot-q" id="spotQ"></h3>
+      <div class="spot-a" id="spotA"></div>
+      <div class="spot-actions">
+        <button class="poll-button" id="spotShow">Mostrar resposta</button>
+        <button class="poll-button-reset" id="spotNext">🎲 Outra</button>
+        <button class="poll-button-reset" id="spotClose">Fechar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/presentation.js"></script>
+</body>
+</html>

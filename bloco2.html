@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ISO/IEC 9126 | Bloco 2 - O Modelo de Qualidade</title>
+  
+  <!-- Fontes Google: Inter para textos limpos e Fira Code / JetBrains Mono para o estilo developer -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="nord-theme" data-prev-href="index.html" data-timer-limit="15" data-next-label="Ir para o Bloco 3" data-next-href="bloco3.html">
+
+  <!-- Barra de Progresso Superior -->
+  <div class="progress-bar-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- Cabeçalho de Status da Apresentação -->
+  <header class="presentation-header">
+    <div class="header-left">
+      <div class="tech-badge">
+        <span class="pulse-dot"></span>
+        <span class="mono">CEULP/ULBRA • ENGENHARIA DE SOFTWARE</span>
+      </div>
+      <span class="block-indicator">BLOCO 02: ISO/IEC 9126-1 • O MODELO DE QUALIDADE</span>
+    </div>
+    <div class="header-right">
+      <div class="timer-widget" id="timerWidget" title="Clique para zerar o cronômetro">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        <span class="mono" id="blockTimer">00:00</span>
+      </div>
+      <button class="icon-btn" id="btnHelp" title="Atalhos do Teclado (?)">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+          <line x1="12" y1="17" x2="12.01" y2="17"></line>
+        </svg>
+      </button>
+      <button class="icon-btn" id="btnFullscreen" title="Tela Cheia (F)">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Container de Slides -->
+  <main class="presentation-viewport">
+
+    <section class="slide active" data-slide="1" id="slide-1" data-title="02.1: Funcionalidade &amp; Confiabilidade">
+      <div class="slide-content">
+        <div class="slide-top-header">
+          <div class="section-tag mono"><span class="accent-dot"></span> 02.1 // FUNCIONALIDADE &amp; CONFIABILIDADE</div>
+          <h2 class="slide-heading slim">Faz o que deve… e <span class="gradient-text">continua no ar?</span></h2>
+        </div>
+        <div class="char-grid">
+        <article class="char-card c-frost">
+          <div class="char-head">
+            <span class="char-icon">🎯</span>
+            <div>
+              <span class="char-iso mono">CARACTERÍSTICA 01</span>
+              <h3 class="char-name">Funcionalidade</h3>
+            </div>
+          </div>
+          <div class="char-question mono">&gt; O sistema faz o que deve?</div>
+          <p class="char-def">Capacidade de prover funções que satisfaçam as necessidades <strong>declaradas e implícitas</strong> do usuário.</p>
+          <span class="sub-label mono">// SUBCARACTERÍSTICAS</span>
+          <ul class="sub-list">
+            <li class="sub-item"><span class="sub-name">Adequação</span><span class="sub-desc">Funções apropriadas para a tarefa</span></li>
+            <li class="sub-item"><span class="sub-name">Acurácia</span><span class="sub-desc">Precisão dos resultados</span></li>
+            <li class="sub-item"><span class="sub-name">Interoperabilidade</span><span class="sub-desc">Capacidade de interagir com outros sistemas</span></li>
+            <li class="sub-item"><span class="sub-name">Segurança</span><span class="sub-desc">Proteção de dados e acessos</span></li>
+            <li class="sub-item"><span class="sub-name">Conformidade</span><span class="sub-desc">Aderência a normas e leis</span></li>
+          </ul>
+        </article>
+        <article class="char-card c-aurora">
+          <div class="char-head">
+            <span class="char-icon">🛡️</span>
+            <div>
+              <span class="char-iso mono">CARACTERÍSTICA 02</span>
+              <h3 class="char-name">Confiabilidade</h3>
+            </div>
+          </div>
+          <div class="char-question mono">&gt; Ele se mantém no ar sem falhas?</div>
+          <p class="char-def">Capacidade de manter seu <strong>nível de desempenho</strong> sob condições especificadas.</p>
+          <span class="sub-label mono">// SUBCARACTERÍSTICAS</span>
+          <ul class="sub-list">
+            <li class="sub-item"><span class="sub-name">Maturidade</span><span class="sub-desc">Evitar falhas</span></li>
+            <li class="sub-item"><span class="sub-name">Tolerância a Falhas</span><span class="sub-desc">Manter o desempenho mesmo com defeitos</span></li>
+            <li class="sub-item"><span class="sub-name">Recuperabilidade</span><span class="sub-desc">Restabelecer operação e dados após uma falha</span></li>
+            <li class="sub-item"><span class="sub-name">Conformidade</span><span class="sub-desc">Aderência a normas e padrões</span></li>
+          </ul>
+        </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="2" id="slide-2" data-title="02.2: Usabilidade &amp; Eficiência">
+      <div class="slide-content">
+        <div class="slide-top-header">
+          <div class="section-tag mono"><span class="accent-dot"></span> 02.2 // USABILIDADE &amp; EFICIÊNCIA</div>
+          <h2 class="slide-heading slim">É fácil de usar… e <span class="gradient-text">rápido de verdade?</span></h2>
+        </div>
+        <div class="char-grid">
+        <article class="char-card c-teal">
+          <div class="char-head">
+            <span class="char-icon">🧭</span>
+            <div>
+              <span class="char-iso mono">CARACTERÍSTICA 03</span>
+              <h3 class="char-name">Usabilidade</h3>
+            </div>
+          </div>
+          <div class="char-question mono">&gt; É fácil de usar?</div>
+          <p class="char-def">Capacidade de ser <strong>compreendido, aprendido, operado</strong> e atraente ao usuário.</p>
+          <span class="sub-label mono">// SUBCARACTERÍSTICAS</span>
+          <ul class="sub-list">
+            <li class="sub-item"><span class="sub-name">Inteligibilidade</span><span class="sub-desc">Entender se e como serve à tarefa</span></li>
+            <li class="sub-item"><span class="sub-name">Apreensibilidade</span><span class="sub-desc">Facilidade de aprendizado</span></li>
+            <li class="sub-item"><span class="sub-name">Operacionalidade</span><span class="sub-desc">Facilidade de controle e operação</span></li>
+            <li class="sub-item"><span class="sub-name">Proteção frente a erros</span><span class="sub-desc">Evita erros do usuário</span></li>
+            <li class="sub-item"><span class="sub-name">Estética / Atratividade</span><span class="sub-desc">Interface agradável</span></li>
+            <li class="sub-item"><span class="sub-name">Acessibilidade</span><span class="sub-desc">Uso por todos os perfis</span></li>
+            <li class="sub-item"><span class="sub-name">Conformidade</span><span class="sub-desc">Aderência a normas</span></li>
+          </ul>
+        </article>
+        <article class="char-card c-purple">
+          <div class="char-head">
+            <span class="char-icon">⚡</span>
+            <div>
+              <span class="char-iso mono">CARACTERÍSTICA 04</span>
+              <h3 class="char-name">Eficiência</h3>
+            </div>
+          </div>
+          <div class="char-question mono">&gt; Consome muita RAM/CPU ou responde rápido?</div>
+          <p class="char-def">Relação entre o <strong>nível de desempenho</strong>, o tempo de execução e os recursos consumidos.</p>
+          <span class="sub-label mono">// SUBCARACTERÍSTICAS</span>
+          <ul class="sub-list">
+            <li class="sub-item"><span class="sub-name">Comportamento no Tempo</span><span class="sub-desc">Tempos de resposta e processamento</span></li>
+            <li class="sub-item"><span class="sub-name">Utilização de Recursos</span><span class="sub-desc">Memória, processador e demais recursos</span></li>
+            <li class="sub-item"><span class="sub-name">Conformidade</span><span class="sub-desc">Aderência a normas</span></li>
+          </ul>
+        </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="3" id="slide-3" data-title="02.3: Manutenibilidade &amp; Portabilidade">
+      <div class="slide-content">
+        <div class="slide-top-header">
+          <div class="section-tag mono"><span class="accent-dot"></span> 02.3 // MANUTENIBILIDADE &amp; PORTABILIDADE</div>
+          <h2 class="slide-heading slim">Código limpo… e <span class="gradient-text">roda em qualquer lugar?</span></h2>
+        </div>
+        <div class="char-grid">
+        <article class="char-card c-blue">
+          <div class="char-head">
+            <span class="char-icon">🛠️</span>
+            <div>
+              <span class="char-iso mono">CARACTERÍSTICA 05</span>
+              <h3 class="char-name">Manutenibilidade</h3>
+            </div>
+          </div>
+          <div class="char-question mono">&gt; O código é limpo para refatoração e testes?</div>
+          <p class="char-def">Facilidade de <strong>modificar</strong> o software: correções, melhorias ou alterações.</p>
+          <span class="sub-label mono">// SUBCARACTERÍSTICAS</span>
+          <ul class="sub-list">
+            <li class="sub-item"><span class="sub-name">Analisabilidade</span><span class="sub-desc">Diagnosticar causas de falhas</span></li>
+            <li class="sub-item"><span class="sub-name">Modificabilidade</span><span class="sub-desc">Facilidade de alterar o código</span></li>
+            <li class="sub-item"><span class="sub-name">Estabilidade</span><span class="sub-desc">Evitar efeitos colaterais pós-alteração</span></li>
+            <li class="sub-item"><span class="sub-name">Testabilidade</span><span class="sub-desc">Facilidade de testar as mudanças</span></li>
+            <li class="sub-item"><span class="sub-name">Conformidade</span><span class="sub-desc">Aderência a normas</span></li>
+          </ul>
+        </article>
+        <article class="char-card c-green">
+          <div class="char-head">
+            <span class="char-icon">📦</span>
+            <div>
+              <span class="char-iso mono">CARACTERÍSTICA 06</span>
+              <h3 class="char-name">Portabilidade</h3>
+            </div>
+          </div>
+          <div class="char-question mono">&gt; Roda em qualquer SO ou infraestrutura?</div>
+          <p class="char-def">Capacidade de ser <strong>transferido</strong> entre ambientes: sistema operacional, hardware, banco de dados.</p>
+          <span class="sub-label mono">// SUBCARACTERÍSTICAS</span>
+          <ul class="sub-list">
+            <li class="sub-item"><span class="sub-name">Adaptabilidade</span><span class="sub-desc">Adaptar-se a ambientes sem configurações extras</span></li>
+            <li class="sub-item"><span class="sub-name">Capacidade de Instalação</span><span class="sub-desc">Facilidade de instalar</span></li>
+            <li class="sub-item"><span class="sub-name">Coexistência</span><span class="sub-desc">Conviver com outros softwares no ambiente</span></li>
+            <li class="sub-item"><span class="sub-name">Capacidade de Substituir</span><span class="sub-desc">Substituir outro produto</span></li>
+            <li class="sub-item"><span class="sub-name">Conformidade</span><span class="sub-desc">Aderência a normas</span></li>
+          </ul>
+        </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Barra de Controle Inferior -->
+  <footer class="presentation-footer">
+    <div class="footer-left">
+      <div class="slide-counter mono">
+        <span class="current-slide" id="currentSlideNum">01</span>
+        <span class="separator">/</span>
+        <span class="total-slides" id="totalSlidesNum">03</span>
+      </div>
+      <div class="slide-title-preview" id="slideTitlePreview">
+        2.1: Funcionalidade &amp; Confiabilidade
+      </div>
+    </div>
+
+    <!-- Navegação de Slides em Miniatura (Dots) -->
+    <div class="slide-dots" id="slideDots">
+      <button class="dot-btn active" data-goto="1" title="2.1 Funcionalidade &amp; Confiabilidade"></button>
+      <button class="dot-btn" data-goto="2" title="2.2 Usabilidade &amp; Eficiência"></button>
+      <button class="dot-btn" data-goto="3" title="2.3 Manutenibilidade &amp; Portabilidade"></button>
+    </div>
+
+    <div class="footer-right">
+      <div class="nav-controls">
+        <button class="nav-btn" id="btnPrev" title="Slide Anterior (Seta Esquerda)">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+          <span class="btn-text">Anterior</span>
+        </button>
+        <button class="nav-btn primary" id="btnNext" title="Próximo Slide (Seta Direita / Espaço)">
+          <span class="btn-text">Avançar</span>
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal de Ajuda / Atalhos -->
+  <div class="modal-overlay" id="helpModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title mono">// ATALHOS DE TECLADO</h3>
+        <button class="modal-close" id="btnCloseHelp">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="shortcut-row">
+          <span class="keys"><kbd>→</kbd> ou <kbd>Espaço</kbd> ou <kbd>PageDown</kbd></span>
+          <span class="action">Próximo Slide</span>
+        </div>
+        <div class="shortcut-row">
+          <span class="keys"><kbd>←</kbd> ou <kbd>Backspace</kbd> ou <kbd>PageUp</kbd></span>
+          <span class="action">Slide Anterior</span>
+        </div>
+        <div class="shortcut-row">
+          <span class="keys"><kbd>F</kbd></span>
+          <span class="action">Alternar Modo Tela Cheia</span>
+        </div>
+        <div class="shortcut-row">
+          <span class="keys"><kbd>Home</kbd> / <kbd>End</kbd></span>
+          <span class="action">Primeiro / Último Slide</span>
+        </div>
+        <div class="shortcut-row">
+          <span class="keys"><kbd>T</kbd></span>
+          <span class="action">Zerar / Reiniciar Cronômetro</span>
+        </div>
+        <div class="shortcut-row">
+          <span class="keys"><kbd>?</kbd></span>
+          <span class="action">Abrir este painel de ajuda</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/presentation.js"></script>
+</body>
+</html>

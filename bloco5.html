@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ISO/IEC 9126 | Bloco 5 - Batalha de Softwares</title>
+  
+  <!-- Fontes Google: Inter para textos limpos e Fira Code / JetBrains Mono para o estilo developer -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="nord-theme" data-prev-href="bloco4.html" data-timer-limit="10" data-next-label="Fim • Obrigado!">
+
+  <!-- Barra de Progresso Superior -->
+  <div class="progress-bar-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- Cabeçalho de Status da Apresentação -->
+  <header class="presentation-header">
+    <div class="header-left">
+      <div class="tech-badge">
+        <span class="pulse-dot"></span>
+        <span class="mono">CEULP/ULBRA • ENGENHARIA DE SOFTWARE</span>
+      </div>
+      <span class="block-indicator">BLOCO 05: BATALHA DE SOFTWARES &amp; PERGUNTAS</span>
+    </div>
+    <div class="header-right">
+      <div class="timer-widget" id="timerWidget" title="Clique para zerar o cronômetro">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        <span class="mono" id="blockTimer">00:00</span>
+      </div>
+      <button class="icon-btn" id="btnHelp" title="Atalhos do Teclado (?)">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+          <line x1="12" y1="17" x2="12.01" y2="17"></line>
+        </svg>
+      </button>
+      <button class="icon-btn" id="btnFullscreen" title="Tela Cheia (F)">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Container de Slides -->
+  <main class="presentation-viewport">
+
+    <section class="slide active" data-slide="1" id="slide-1" data-title="5.1: A Batalha (Chrome vs Firefox)">
+      <div class="slide-content">
+        <div class="slide-top-header">
+          <div class="section-tag mono"><span class="accent-dot danger"></span> 05.1 // A BATALHA DOS NAVEGADORES</div>
+          <h2 class="slide-heading slim">Chrome <span class="vs-badge mono">VS</span> Firefox: <span class="gradient-text">quem tem mais qualidade?</span></h2>
+        </div>
+        <div class="battle-wrap">
+          <table class="battle-table">
+            <thead>
+              <tr><th>Característica ISO 9126</th>
+                <th><span class="br-logo chrome-logo"></span> Google Chrome</th>
+                <th><span class="br-logo">🦊</span> Mozilla Firefox</th></tr>
+            </thead>
+            <tbody>
+            <tr class="step"><td class="bt-crit"><strong>Funcionalidade</strong><span class="mono">Adequação • Acurácia • Segurança</span></td><td>Ecossistema enorme de extensões e DevTools</td><td>Extensões, DevTools e containers de privacidade</td></tr>
+            <tr class="step"><td class="bt-crit"><strong>Confiabilidade</strong><span class="mono">Maturidade • Tolerância a falhas</span></td><td>Isolamento de processos por aba/site</td><td>Multiprocesso e recuperação de sessão</td></tr>
+            <tr class="step"><td class="bt-crit"><strong>Usabilidade</strong><span class="mono">Operacionalidade • Estética</span></td><td>Interface minimalista e sincronização com a conta Google</td><td>Interface personalizável e modo leitura</td></tr>
+            <tr class="step"><td class="bt-crit"><strong>Eficiência</strong><span class="mono">Tempo de resposta • Recursos</span></td><td>Motor V8 • fama de consumir bastante RAM</td><td>Motor SpiderMonkey • <em>meça, não presuma!</em></td></tr>
+            <tr class="step"><td class="bt-crit"><strong>Manutenibilidade</strong><span class="mono">Analisabilidade • Modificabilidade</span></td><td>Código aberto via Chromium; atualizações rápidas</td><td>Código aberto (MPL), mantido pela Mozilla</td></tr>
+            <tr class="step"><td class="bt-crit"><strong>Portabilidade</strong><span class="mono">Adaptabilidade • Instalação</span></td><td>Windows, macOS, Linux, Android e iOS</td><td>Windows, macOS, Linux, Android e iOS</td></tr>
+            </tbody>
+          </table>
+          <div class="step-hint mono" id="stepHint">▸ Pressione <kbd class="key-hint">→</kbd> para revelar cada critério (pontos de partida para a discussão)</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="2" id="slide-2" data-title="5.2: Avaliação Interativa (Mentimeter)">
+      <div class="slide-content">
+        <div class="split-layout vote-split">
+          <div class="slide-text-side">
+            <div class="section-tag mono"><span class="accent-dot"></span> 05.2 // AVALIAÇÃO INTERATIVA • MENTIMETER</div>
+            <h2 class="slide-heading slim">Agora é com <span class="gradient-text">vocês!</span></h2>
+            <p class="slide-lead tight">Escaneiem o QR Code e deem uma <strong>nota de 0 a 10</strong> para cada navegador.</p>
+            <div class="qr-box">
+              <div class="qr-grid" id="qrGrid" aria-label="QR Code ilustrativo"></div>
+              <div class="qr-info">
+                <span class="mono qr-label">ENTRE EM</span>
+                <span class="qr-url mono">menti.com</span>
+                <span class="mono qr-label">COM O CÓDIGO</span>
+                <input class="chk-input mono qr-code" value="0000 0000" aria-label="Código do Mentimeter">
+                <span class="qr-note mono">QR ilustrativo: troque pelo real do Mentimeter</span>
+              </div>
+            </div>
+          </div>
+          <div class="vote-panel">
+            <div class="card-bar"><span class="mono card-title">📊 Notas da turma (média, 0–10)</span>
+              <span><button class="tag-chip vt-sim" id="voteSim">🎲 Simular votos</button> <button class="tag-chip vt-sim" id="voteReset">↺ Zerar</button></span></div>
+            <div class="vote-body">
+            <div class="vote-row" data-crit="efi">
+              <div class="vr-title"><span class="vr-icon">⚡</span><div><strong>Eficiência</strong><span class="mono">Tempo de resposta e uso de recursos</span></div></div>
+              <div class="vr-side chrome"><span class="vr-name mono">Chrome</span>
+                <button class="vt-btn" data-br="0" data-d="-0.5">−</button><span class="vr-val mono" id="v-efi-0">0.0</span><button class="vt-btn" data-br="0" data-d="0.5">+</button>
+                <div class="vr-bar"><div class="vr-fill" id="b-efi-0"></div></div></div>
+              <div class="vr-side firefox"><span class="vr-name mono">Firefox</span>
+                <button class="vt-btn" data-br="1" data-d="-0.5">−</button><span class="vr-val mono" id="v-efi-1">0.0</span><button class="vt-btn" data-br="1" data-d="0.5">+</button>
+                <div class="vr-bar"><div class="vr-fill" id="b-efi-1"></div></div></div>
+            </div>
+            <div class="vote-row" data-crit="fun">
+              <div class="vr-title"><span class="vr-icon">🎯</span><div><strong>Funcionalidade</strong><span class="mono">Faz o que precisa?</span></div></div>
+              <div class="vr-side chrome"><span class="vr-name mono">Chrome</span>
+                <button class="vt-btn" data-br="0" data-d="-0.5">−</button><span class="vr-val mono" id="v-fun-0">0.0</span><button class="vt-btn" data-br="0" data-d="0.5">+</button>
+                <div class="vr-bar"><div class="vr-fill" id="b-fun-0"></div></div></div>
+              <div class="vr-side firefox"><span class="vr-name mono">Firefox</span>
+                <button class="vt-btn" data-br="1" data-d="-0.5">−</button><span class="vr-val mono" id="v-fun-1">0.0</span><button class="vt-btn" data-br="1" data-d="0.5">+</button>
+                <div class="vr-bar"><div class="vr-fill" id="b-fun-1"></div></div></div>
+            </div>
+            <div class="vote-row" data-crit="usa">
+              <div class="vr-title"><span class="vr-icon">🧭</span><div><strong>Usabilidade</strong><span class="mono">É fácil e agradável de usar?</span></div></div>
+              <div class="vr-side chrome"><span class="vr-name mono">Chrome</span>
+                <button class="vt-btn" data-br="0" data-d="-0.5">−</button><span class="vr-val mono" id="v-usa-0">0.0</span><button class="vt-btn" data-br="0" data-d="0.5">+</button>
+                <div class="vr-bar"><div class="vr-fill" id="b-usa-0"></div></div></div>
+              <div class="vr-side firefox"><span class="vr-name mono">Firefox</span>
+                <button class="vt-btn" data-br="1" data-d="-0.5">−</button><span class="vr-val mono" id="v-usa-1">0.0</span><button class="vt-btn" data-br="1" data-d="0.5">+</button>
+                <div class="vr-bar"><div class="vr-fill" id="b-usa-1"></div></div></div>
+            </div>
+            </div>
+            <div class="vote-foot mono">Use − / + para lançar a média que aparecer no Mentimeter.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="3" id="slide-3" data-title="5.3: Conclusão e Resultado da Batalha">
+      <div class="slide-content">
+        <div class="slide-top-header">
+          <div class="section-tag mono"><span class="accent-dot"></span> 05.3 // CONCLUSÃO</div>
+          <h2 class="slide-heading slim">O resultado segundo a <span class="gradient-text">ISO/IEC 9126</span></h2>
+        </div>
+        <div class="concl-grid">
+          <div class="winner-card" id="winnerCard">
+            <span class="mono sub-label">// VEREDITO DA TURMA</span>
+            <div class="winner-name" id="winnerName">Aguardando votação…</div>
+            <div class="winner-score mono" id="winnerScore">Lance as notas no slide 5.2</div>
+            <div class="score-rows" id="scoreRows"></div>
+          </div>
+          <div class="take-grid">
+            <div class="take-card"><span class="take-ic">🧩</span><h4>Não há vencedor absoluto</h4><p>A melhor escolha depende do <strong>contexto de uso</strong> e do peso de cada característica.</p></div>
+            <div class="take-card"><span class="take-ic">📏</span><h4>Meça, não presuma</h4><p>Use as <strong>3 visões</strong>: métricas internas, externas e de qualidade em uso.</p></div>
+            <div class="take-card"><span class="take-ic">🗣️</span><h4>Linguagem comum</h4><p>A norma dá <strong>vocabulário padrão</strong> para clientes e engenheiros falarem de qualidade.</p></div>
+            <div class="take-card"><span class="take-ic">🚀</span><h4>Evolução contínua</h4><p>A base vive na <strong>ISO/IEC 25010</strong>: qualidade é processo, não evento.</p></div>
+          </div>
+        </div>
+        <div class="next-block-teaser">
+          <div class="teaser-left"><span class="teaser-badge mono">PRÓXIMO PASSO</span><span class="teaser-title">Sessão de dúvidas e perguntas</span></div>
+          <button class="teaser-btn" id="goQna"><span>Abrir perguntas</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-inline"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="4" id="slide-4" data-title="5.4: Dúvidas e Perguntas">
+      <div class="slide-content">
+        <div class="qa-top">
+          <div>
+            <div class="section-tag mono"><span class="accent-dot"></span> 05.4 // DÚVIDAS &amp; PERGUNTAS</div>
+            <h2 class="slide-heading slim">Perguntas? <span class="gradient-text">Mandem ver!</span></h2>
+          </div>
+          <button class="poll-button qa-random" id="qaRandom">🎲 Sortear pergunta</button>
+        </div>
+        <div class="qa-tabs"><button class="qa-tab active" data-cat="0">Conceitos</button><button class="qa-tab" data-cat="1">Modelo 9126-1</button><button class="qa-tab" data-cat="2">Métricas</button><button class="qa-tab" data-cat="3">Ferramentas</button></div>
+        <div class="qa-panels">
+            <div class="qa-panel active" data-cat="0">
+              <div class="qa-card"><button class="qa-q"><span class="qa-n mono">Q1</span><span>Qual a diferença entre qualidade de processo e qualidade de produto?</span><span class="qa-chev">▾</span></button><div class="qa-a">Processo é <em>como</em> desenvolvemos (ex.: CMMI, MPS.BR, ISO 12207). Produto é <em>o que</em> entregamos, o foco da ISO 9126.</div></div>
+              <div class="qa-card"><button class="qa-q"><span class="qa-n mono">Q2</span><span>Por que o Ariane 5 falhou, em termos da ISO 9126?</span><span class="qa-chev">▾</span></button><div class="qa-a">Reuso do módulo do Ariane 4 sem revalidar (Portabilidade) e exceção de overflow não tratada (Confiabilidade / Tolerância a falhas).</div></div>
+              <div class="qa-card"><button class="qa-q"><span class="qa-n mono">Q3</span><span>A ISO 9126 ainda vale, se foi substituída?</span><span class="qa-chev">▾</span></button><div class="qa-a">Foi substituída pela ISO/IEC 25010 (SQuaRE), mas segue como base conceitual e didática, e as ideias migraram quase intactas.</div></div>
+              <div class="qa-card"><button class="qa-q"><span class="qa-n mono">Q4</span><span>Qualidade é só ausência de bugs?</span><span class="qa-chev">▾</span></button><div class="qa-a">Não. Um sistema sem bugs pode ser lento, difícil de usar ou impossível de manter. Qualidade é o conjunto das 6 características.</div></div>
+            </div>
+            <div class="qa-panel" data-cat="1">
+              <div class="qa-card"><button class="qa-q"><span class="qa-n mono">Q1</span><span>Qual a diferença entre Funcionalidade e Usabilidade?</span><span class="qa-chev">▾</span></button><div class="qa-a">Funcionalidade: o sistema <em>faz</em> o que deve. Usabilidade: o usuário <em>consegue</em> fazer isso com facilidade.</div></div>
+              <div class="qa-card"><button class="qa-q"><span class="qa-n mono">Q2</span><span>Onde fica a Segurança na 9126?</span><span class="qa-chev">▾</span></button><div class="qa-a">É subcaracterística de Funcionalidade. Na 25010 ela vira característica própria.</div></div>
+              <div class="qa-card"><button class="qa-q"><span class="qa-n mono">Q3</span><span>O que é a subcaracterística Conformidade?</span><span class="qa-chev">▾</span></button><div class="qa-a">Aderência a normas, padrões e leis relacionados àquela característica. Existe em todas as seis.</div></div>
+              <div class="qa-card"><button class="qa-q"><span class="qa-n mono">Q4</span><span>Dá para maximizar as 6 características ao mesmo tempo?</span><span class="qa-chev">▾</span></button><div class="qa-a">Raramente. Há trade-offs, como Eficiência extrema que prejudica Manutenibilidade e Portabilidade. Define-se prioridade por contexto.</div></div>
+            </div>
+            <div class="qa-panel" data-cat="2">
+              <div class="qa-card"><button class="qa-q"><span class="qa-n mono">Q1</span><span>Quando usar métrica interna e quando usar externa?</span><span class="qa-chev">▾</span></button><div class="qa-a">Interna durante o desenvolvimento (código parado); externa quando já há software executando em teste ou homologação.</div></div>
+              <div class="qa-card"><button class="qa-q"><span class="qa-n mono">Q2</span><span>Complexidade ciclomática 18 é ruim?</span><span class="qa-chev">▾</span></button><div class="qa-a">Referência comum (McCabe): até 10 é saudável; acima de ~20 é alto risco. 18 já pede refatoração.</div></div>
+              <div class="qa-card"><button class="qa-q"><span class="qa-n mono">Q3</span><span>Métrica interna boa garante boa qualidade externa?</span><span class="qa-chev">▾</span></button><div class="qa-a">Correlaciona, mas não garante. Por isso a norma exige as três visões, inclusive a qualidade em uso.</div></div>
+              <div class="qa-card"><button class="qa-q"><span class="qa-n mono">Q4</span><span>Como medir satisfação do usuário?</span><span class="qa-chev">▾</span></button><div class="qa-a">Questionários padronizados (SUS), NPS, entrevistas e testes de usabilidade com tarefas reais.</div></div>
+            </div>
+            <div class="qa-panel" data-cat="3">
+              <div class="qa-card"><button class="qa-q"><span class="qa-n mono">Q1</span><span>O SonarQube substitui os testes?</span><span class="qa-chev">▾</span></button><div class="qa-a">Não. É análise estática. A cobertura de 0% no relatório mostra que ele alerta sobre a falta de testes, mas não os executa.</div></div>
+              <div class="qa-card"><button class="qa-q"><span class="qa-n mono">Q2</span><span>Por que o Quality Gate falhou com Manutenibilidade A?</span><span class="qa-chev">▾</span></button><div class="qa-a">O gate costuma avaliar condições sobre código novo (novas vulnerabilidades, cobertura). Uma nota boa em uma área não compensa outras ruins.</div></div>
+              <div class="qa-card"><button class="qa-q"><span class="qa-n mono">Q3</span><span>O TestLink executa os testes automaticamente?</span><span class="qa-chev">▾</span></button><div class="qa-a">Ele gerencia planos, casos, execuções e resultados (em geral manuais). Automação entra por integração com outras ferramentas.</div></div>
+              <div class="qa-card"><button class="qa-q"><span class="qa-n mono">Q4</span><span>O que significa cobertura de 0%?</span><span class="qa-chev">▾</span></button><div class="qa-a">Nenhum teste automatizado exercita o código. Qualquer refatoração vira aposta, o que é um risco para a Manutenibilidade.</div></div>
+            </div>
+        </div>
+        <div class="qa-foot mono">Clique em uma pergunta para ver a resposta • <kbd class="key-hint">1</kbd>–<kbd class="key-hint">4</kbd> trocam de slide</div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Barra de Controle Inferior -->
+  <footer class="presentation-footer">
+    <div class="footer-left">
+      <div class="slide-counter mono">
+        <span class="current-slide" id="currentSlideNum">01</span>
+        <span class="separator">/</span>
+        <span class="total-slides" id="totalSlidesNum">04</span>
+      </div>
+      <div class="slide-title-preview" id="slideTitlePreview">
+        5.1: A Batalha (Chrome vs Firefox)
+      </div>
+    </div>
+
+    <!-- Navegação de Slides em Miniatura (Dots) -->
+    <div class="slide-dots" id="slideDots">
+      <button class="dot-btn active" data-goto="1" title="5.1 A Batalha"></button>
+      <button class="dot-btn" data-goto="2" title="5.2 Avaliação Interativa"></button>
+      <button class="dot-btn" data-goto="3" title="5.3 Conclusão"></button>
+      <button class="dot-btn" data-goto="4" title="5.4 Perguntas &amp; Respostas"></button>
+    </div>
+
+    <div class="footer-right">
+      <div class="nav-controls">
+        <button class="nav-btn" id="btnPrev" title="Slide Anterior (Seta Esquerda)">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+          <span class="btn-text">Anterior</span>
+        </button>
+        <button class="nav-btn primary" id="btnNext" title="Próximo Slide (Seta Direita / Espaço)">
+          <span class="btn-text">Avançar</span>
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal de Ajuda / Atalhos -->
+  <div class="modal-overlay" id="helpModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title mono">// ATALHOS DE TECLADO</h3>
+        <button class="modal-close" id="btnCloseHelp">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="shortcut-row">
+          <span class="keys"><kbd>→</kbd> ou <kbd>Espaço</kbd> ou <kbd>PageDown</kbd></span>
+          <span class="action">Próximo Slide</span>
+        </div>
+        <div class="shortcut-row">
+          <span class="keys"><kbd>←</kbd> ou <kbd>Backspace</kbd> ou <kbd>PageUp</kbd></span>
+          <span class="action">Slide Anterior</span>
+        </div>
+        <div class="shortcut-row">
+          <span class="keys"><kbd>F</kbd></span>
+          <span class="action">Alternar Modo Tela Cheia</span>
+        </div>
+        <div class="shortcut-row">
+          <span class="keys"><kbd>Home</kbd> / <kbd>End</kbd></span>
+          <span class="action">Primeiro / Último Slide</span>
+        </div>
+        <div class="shortcut-row">
+          <span class="keys"><kbd>T</kbd></span>
+          <span class="action">Zerar / Reiniciar Cronômetro</span>
+        </div>
+        <div class="shortcut-row">
+          <span class="keys"><kbd>?</kbd></span>
+          <span class="action">Abrir este painel de ajuda</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="spot-overlay" id="spot">
+    <div class="spot-card">
+      <span class="mono sub-label" id="spotCat"></span>
+      <h3 class="spot-q" id="spotQ"></h3>
+      <div class="spot-a" id="spotA"></div>
+      <div class="spot-actions"><button class="poll-button" id="spotShow">Mostrar resposta</button><button class="poll-button-reset" id="spotNext">🎲 Outra</button><button class="poll-button-reset" id="spotClose">Fechar</button></div>
+    </div>
+  </div>
+
+  <script src="js/presentation.js"></script>
+</body>
+</html>
