@@ -31,9 +31,9 @@
         <button class="block-nav-btn active" data-target-slide="1" title="Pular para o Bloco 1 (12 min)">B1: Introdução</button>
         <button class="block-nav-btn" data-target-slide="8" title="Pular para o Bloco 2 (15 min)">B2: Modelo 9126-1</button>
         <button class="block-nav-btn" data-target-slide="12" title="Pular para o Minigame: O Tribunal da Qualidade">⚖️ Tribunal</button>
-        <button class="block-nav-btn" data-target-slide="18" title="Pular para o Bloco 3 (10 min)">B3: As Métricas</button>
-        <button class="block-nav-btn" data-target-slide="22" title="Pular para o Bloco 4 (15 min)">B4: Ferramentas</button>
-        <button class="block-nav-btn" data-target-slide="27" title="Pular para o Bloco 5 (10 min)">B5: Batalha &amp; Q&amp;A</button>
+        <button class="block-nav-btn" data-target-slide="19" title="Pular para o Bloco 3 (10 min)">B3: As Métricas</button>
+        <button class="block-nav-btn" data-target-slide="23" title="Pular para o Bloco 4 (15 min)">B4: Ferramentas</button>
+        <button class="block-nav-btn" data-target-slide="28" title="Pular para o Bloco 5 (10 min)">B5: Batalha &amp; Q&amp;A</button>
       </nav>
       <span class="block-indicator" id="blockIndicator">BLOCO 01: INTRODUÇÃO &amp; CONTEXTUALIZAÇÃO</span>
     </div>
@@ -102,7 +102,7 @@
             </div>
             <div class="team-info">
               <span class="team-label">EQUIPE DE APRESENTAÇÃO</span>
-              <span class="team-names">Engenharia de Software • CEULP / ULBRA</span>
+              <span class="team-names">Grupo 1 • Engenharia de Software • CEULP / ULBRA</span>
             </div>
           </div>
 
@@ -124,7 +124,7 @@
     <!-- ========================================== -->
     <!-- SLIDE 1.2: QUEBRA-GELO INTERATIVO          -->
     <!-- ========================================== -->
-    <section class="slide" data-slide="2" data-block="1" id="slide-2" data-title="1.2: Quebra-Gelo (O Portal Acadêmico Caiu)">
+    <section class="slide" data-slide="2" data-block="1" id="slide-2" data-title="1.2: Sensibilização (O Portal Acadêmico)">
       <div class="slide-content split-layout">
         <div class="slide-text-side">
           <div class="section-tag mono">
@@ -143,29 +143,29 @@
             </p>
           </div>
 
-          <!-- Componente Interativo de Votação em Sala -->
-          <div class="interactive-poll-box">
-            <div class="poll-prompt">
-              <span>Levantem a mão ou cliquem no botão:</span>
+          <!-- Ponte de Transição para o Caso Ariane 5 -->
+          <div class="bridge-callout-card">
+            <div class="bc-header">
+              <span class="bc-tag mono"><span class="accent-dot"></span> REFLEXÃO // DO INCÔMODO AO DESASTRE</span>
             </div>
-            <div class="poll-actions">
-              <button class="poll-button" id="btnVote">
-                <span class="poll-button-icon">🙋‍♂️</span>
-                <span class="poll-button-text">Já sofri com isso!</span>
-                <span class="poll-badge mono" id="voteCount">34</span>
-              </button>
-              <button class="poll-button-reset" id="btnResetVote" title="Zerar votos">↺</button>
+            <p class="bc-lead">
+              Para nós, a queda de um sistema no dia a dia gera estresse, ansiedade e uma entrega de trabalho atrasada...
+            </p>
+            <div class="bc-contrast">
+              <span class="bc-icon">⚠️</span>
+              <p class="bc-question">
+                Mas o que acontece quando a falha de software <strong>vai além da nossa frustração</strong> e se transforma em um prejuízo financeiro colossal ou em risco direto a vidas?
+              </p>
             </div>
-            <div class="poll-bar-wrapper">
-              <div class="poll-bar-fill" id="pollBarFill" style="width: 88%;"></div>
+            <div class="bc-next-hint mono">
+              <span>➔ A seguir: quando uma conversão de dados destruiu um foguete de US$ 370 milhões em 37 segundos</span>
             </div>
-            <span class="poll-caption mono">88% da turma já experimentou a falta de qualidade em momentos críticos</span>
           </div>
 
           <div class="insight-pill">
             <span class="insight-icon">💡</span>
             <div class="insight-text">
-              <strong>O Paradoxo:</strong> O software compila, passa nos testes unitários isolados, mas colapsa sob carga real e frustra 100% dos usuários.
+              <strong>O Paradoxo da Engenharia:</strong> O código compila e passa nos testes do desenvolvedor, mas colapsa no ambiente real — provando que "funcionar na minha máquina" é o oposto de ter qualidade de software.
             </div>
           </div>
         </div>
@@ -845,12 +845,12 @@
               <span class="to-tag mono">CONFLITO 03</span>
               <span class="to-icon">🛠️ vs 🏎️</span>
             </div>
-            <h3>Manutenibilidade vs. Velocidade Máxima</h3>
+            <h3>Manutenibilidade vs. Eficiência (Velocidade)</h3>
             <p class="to-conflito">
-              Arquiteturas limpas (Clean Architecture, microsserviços, injeção de dependência) inserem <strong>indireções e chamadas extras</strong> na pilha de execução.
+              Dividir o sistema em classes, módulos e camadas deixa o código fácil de manter, mas adiciona <strong>mais chamadas e tempo de processamento</strong>.
             </p>
             <div class="to-exemplo mono">
-              <strong>Exemplo:</strong> Sistemas de trading de alta frequência (HFT) sacrificam abstrações por código procedural em C inline.
+              <strong>Exemplo:</strong> Um código direto sem camadas roda mais rápido, mas vira um pesadelo para outro desenvolvedor entender e corrigir no futuro.
             </div>
           </div>
 
@@ -883,34 +883,62 @@
     <!-- ========================================== -->
     <section class="slide" data-slide="12" data-block="tribunal" id="slide-12" data-title="Minigame: O Tribunal da Qualidade (Abertura)">
       <div class="slide-content tribunal-intro-layout">
-        <div class="tribunal-badge-main mono">⚖️ MINIGAME INTERATIVO // BATALHA DAS BANCADAS</div>
+        <div class="tribunal-badge-main mono">⚖️ MINIGAME INTERATIVO // BATALHA DOS 5 GRUPOS</div>
         <h1 class="tribunal-title-main">O Tribunal da Qualidade</h1>
         <p class="tribunal-intro-sub">
-          A sala será dividida em duas bancadas jurídicas da computação: <strong>Lado A (Esquerda)</strong> vs. <strong>Lado B (Direita)</strong>.<br>
-          Analisaremos 4 crimes reais cometidos contra a engenharia de software. Quem diagnosticar a característica violada da ISO 9126 primeiro marca ponto!
+          Os <strong>5 Grupos da turma (Grupo 2 ao Grupo 6)</strong> atuarão como bancadas de acusação técnica da computação.<br>
+          Analisaremos 5 casos reais cometidos contra a engenharia de software. O grupo que diagnosticar a característica violada da ISO 9126 primeiro marca ponto!
         </p>
 
-        <!-- Placar Central Hero -->
-        <div class="tribunal-scoreboard-hero">
-          <div class="bench-card bench-a">
+        <!-- Placar Central Hero: 5 Grupos (Grupo 2 ao 6) -->
+        <div class="tribunal-scoreboard-hero-5">
+          <div class="bench-card bench-g2">
             <span class="bench-tag mono">BANCADA 01</span>
-            <span class="bench-name">🏛️ LADO A (Esquerda)</span>
-            <span class="bench-score" id="heroScoreA">0</span>
+            <span class="bench-name">🏛️ GRUPO 2</span>
+            <span class="bench-score" id="heroScoreG2">0</span>
             <div class="bench-btns">
-              <button class="bench-btn" onclick="addTribunalScore('a', 1)">+1 Ponto</button>
-              <button class="bench-btn minus" onclick="addTribunalScore('a', -1)">-1</button>
+              <button class="bench-btn" onclick="addTribunalScore(2, 1)">+1 Ponto</button>
+              <button class="bench-btn minus" onclick="addTribunalScore(2, -1)">-1</button>
             </div>
           </div>
 
-          <div class="scoreboard-vs">VS</div>
-
-          <div class="bench-card bench-b">
+          <div class="bench-card bench-g3">
             <span class="bench-tag mono">BANCADA 02</span>
-            <span class="bench-name">🏛️ LADO B (Direita)</span>
-            <span class="bench-score" id="heroScoreB">0</span>
+            <span class="bench-name">🏛️ GRUPO 3</span>
+            <span class="bench-score" id="heroScoreG3">0</span>
             <div class="bench-btns">
-              <button class="bench-btn" onclick="addTribunalScore('b', 1)">+1 Ponto</button>
-              <button class="bench-btn minus" onclick="addTribunalScore('b', -1)">-1</button>
+              <button class="bench-btn" onclick="addTribunalScore(3, 1)">+1 Ponto</button>
+              <button class="bench-btn minus" onclick="addTribunalScore(3, -1)">-1</button>
+            </div>
+          </div>
+
+          <div class="bench-card bench-g4">
+            <span class="bench-tag mono">BANCADA 03</span>
+            <span class="bench-name">🏛️ GRUPO 4</span>
+            <span class="bench-score" id="heroScoreG4">0</span>
+            <div class="bench-btns">
+              <button class="bench-btn" onclick="addTribunalScore(4, 1)">+1 Ponto</button>
+              <button class="bench-btn minus" onclick="addTribunalScore(4, -1)">-1</button>
+            </div>
+          </div>
+
+          <div class="bench-card bench-g5">
+            <span class="bench-tag mono">BANCADA 04</span>
+            <span class="bench-name">🏛️ GRUPO 5</span>
+            <span class="bench-score" id="heroScoreG5">0</span>
+            <div class="bench-btns">
+              <button class="bench-btn" onclick="addTribunalScore(5, 1)">+1 Ponto</button>
+              <button class="bench-btn minus" onclick="addTribunalScore(5, -1)">-1</button>
+            </div>
+          </div>
+
+          <div class="bench-card bench-g6">
+            <span class="bench-tag mono">BANCADA 05</span>
+            <span class="bench-name">🏛️ GRUPO 6</span>
+            <span class="bench-score" id="heroScoreG6">0</span>
+            <div class="bench-btns">
+              <button class="bench-btn" onclick="addTribunalScore(6, 1)">+1 Ponto</button>
+              <button class="bench-btn minus" onclick="addTribunalScore(6, -1)">-1</button>
             </div>
           </div>
         </div>
@@ -934,9 +962,15 @@
         <div class="case-top-bar">
           <div class="section-tag mono"><span class="accent-dot danger"></span> RODADA 01 // JULHO DE 2024</div>
           <div class="case-scoreboard-compact mono">
-            <span class="cs-team team-a">Lado A: <strong id="cScoreA1">0</strong> <button class="cs-add-btn" onclick="addTribunalScore('a', 1)">+1</button></span>
-            <span>|</span>
-            <span class="cs-team team-b">Lado B: <strong id="cScoreB1">0</strong> <button class="cs-add-btn" onclick="addTribunalScore('b', 1)">+1</button></span>
+            <span class="cs-group g2"><span class="cs-g-name">G2:</span> <strong id="cScore_c1_g2">0</strong> <button class="cs-add-btn" onclick="addTribunalScore(2, 1)" title="Ponto para Grupo 2">+1</button></span>
+            <span class="cs-sep">|</span>
+            <span class="cs-group g3"><span class="cs-g-name">G3:</span> <strong id="cScore_c1_g3">0</strong> <button class="cs-add-btn" onclick="addTribunalScore(3, 1)" title="Ponto para Grupo 3">+1</button></span>
+            <span class="cs-sep">|</span>
+            <span class="cs-group g4"><span class="cs-g-name">G4:</span> <strong id="cScore_c1_g4">0</strong> <button class="cs-add-btn" onclick="addTribunalScore(4, 1)" title="Ponto para Grupo 4">+1</button></span>
+            <span class="cs-sep">|</span>
+            <span class="cs-group g5"><span class="cs-g-name">G5:</span> <strong id="cScore_c1_g5">0</strong> <button class="cs-add-btn" onclick="addTribunalScore(5, 1)" title="Ponto para Grupo 5">+1</button></span>
+            <span class="cs-sep">|</span>
+            <span class="cs-group g6"><span class="cs-g-name">G6:</span> <strong id="cScore_c1_g6">0</strong> <button class="cs-add-btn" onclick="addTribunalScore(6, 1)" title="Ponto para Grupo 6">+1</button></span>
           </div>
         </div>
 
@@ -959,7 +993,7 @@
             </div>
 
             <div class="case-challenge-box">
-              <span class="challenge-badge mono">⚖️ O DESAFIO (VALENDO PONTO PARA A BANCADA):</span>
+              <span class="challenge-badge mono">⚖️ O DESAFIO (VALENDO PONTO PARA OS GRUPOS):</span>
               <p class="challenge-question">
                 "Se o sistema não soube lidar com um erro interno e parou de funcionar completamente, qual característica da ISO 9126 foi ferida?"
               </p>
@@ -991,9 +1025,15 @@
         <div class="case-top-bar">
           <div class="section-tag mono"><span class="accent-dot danger"></span> RODADA 02 // JANEIRO DE 2018</div>
           <div class="case-scoreboard-compact mono">
-            <span class="cs-team team-a">Lado A: <strong id="cScoreA2">0</strong> <button class="cs-add-btn" onclick="addTribunalScore('a', 1)">+1</button></span>
-            <span>|</span>
-            <span class="cs-team team-b">Lado B: <strong id="cScoreB2">0</strong> <button class="cs-add-btn" onclick="addTribunalScore('b', 1)">+1</button></span>
+            <span class="cs-group g2"><span class="cs-g-name">G2:</span> <strong id="cScore_c2_g2">0</strong> <button class="cs-add-btn" onclick="addTribunalScore(2, 1)" title="Ponto para Grupo 2">+1</button></span>
+            <span class="cs-sep">|</span>
+            <span class="cs-group g3"><span class="cs-g-name">G3:</span> <strong id="cScore_c2_g3">0</strong> <button class="cs-add-btn" onclick="addTribunalScore(3, 1)" title="Ponto para Grupo 3">+1</button></span>
+            <span class="cs-sep">|</span>
+            <span class="cs-group g4"><span class="cs-g-name">G4:</span> <strong id="cScore_c2_g4">0</strong> <button class="cs-add-btn" onclick="addTribunalScore(4, 1)" title="Ponto para Grupo 4">+1</button></span>
+            <span class="cs-sep">|</span>
+            <span class="cs-group g5"><span class="cs-g-name">G5:</span> <strong id="cScore_c2_g5">0</strong> <button class="cs-add-btn" onclick="addTribunalScore(5, 1)" title="Ponto para Grupo 5">+1</button></span>
+            <span class="cs-sep">|</span>
+            <span class="cs-group g6"><span class="cs-g-name">G6:</span> <strong id="cScore_c2_g6">0</strong> <button class="cs-add-btn" onclick="addTribunalScore(6, 1)" title="Ponto para Grupo 6">+1</button></span>
           </div>
         </div>
 
@@ -1016,7 +1056,7 @@
             </div>
 
             <div class="case-challenge-box">
-              <span class="challenge-badge mono">⚖️ O DESAFIO (VALENDO PONTO PARA A BANCADA):</span>
+              <span class="challenge-badge mono">⚖️ O DESAFIO (VALENDO PONTO PARA OS GRUPOS):</span>
               <p class="challenge-question">
                 "O código funcionou perfeitamente, mas induziu o humano a um erro catastrófico. Que característica a equipe de design ignorou?"
               </p>
@@ -1048,9 +1088,15 @@
         <div class="case-top-bar">
           <div class="section-tag mono"><span class="accent-dot danger"></span> RODADA 03 // O CASO DO JSON INFINITO</div>
           <div class="case-scoreboard-compact mono">
-            <span class="cs-team team-a">Lado A: <strong id="cScoreA3">0</strong> <button class="cs-add-btn" onclick="addTribunalScore('a', 1)">+1</button></span>
-            <span>|</span>
-            <span class="cs-team team-b">Lado B: <strong id="cScoreB3">0</strong> <button class="cs-add-btn" onclick="addTribunalScore('b', 1)">+1</button></span>
+            <span class="cs-group g2"><span class="cs-g-name">G2:</span> <strong id="cScore_c3_g2">0</strong> <button class="cs-add-btn" onclick="addTribunalScore(2, 1)" title="Ponto para Grupo 2">+1</button></span>
+            <span class="cs-sep">|</span>
+            <span class="cs-group g3"><span class="cs-g-name">G3:</span> <strong id="cScore_c3_g3">0</strong> <button class="cs-add-btn" onclick="addTribunalScore(3, 1)" title="Ponto para Grupo 3">+1</button></span>
+            <span class="cs-sep">|</span>
+            <span class="cs-group g4"><span class="cs-g-name">G4:</span> <strong id="cScore_c3_g4">0</strong> <button class="cs-add-btn" onclick="addTribunalScore(4, 1)" title="Ponto para Grupo 4">+1</button></span>
+            <span class="cs-sep">|</span>
+            <span class="cs-group g5"><span class="cs-g-name">G5:</span> <strong id="cScore_c3_g5">0</strong> <button class="cs-add-btn" onclick="addTribunalScore(5, 1)" title="Ponto para Grupo 5">+1</button></span>
+            <span class="cs-sep">|</span>
+            <span class="cs-group g6"><span class="cs-g-name">G6:</span> <strong id="cScore_c3_g6">0</strong> <button class="cs-add-btn" onclick="addTribunalScore(6, 1)" title="Ponto para Grupo 6">+1</button></span>
           </div>
         </div>
 
@@ -1073,7 +1119,7 @@
             </div>
 
             <div class="case-challenge-box">
-              <span class="challenge-badge mono">⚖️ O DESAFIO (VALENDO PONTO PARA A BANCADA):</span>
+              <span class="challenge-badge mono">⚖️ O DESAFIO (VALENDO PONTO PARA OS GRUPOS):</span>
               <p class="challenge-question">
                 "O jogo não caiu e não deu tela azul. Mas o código desperdiçou tempo e processador à toa. Qual característica foi ferida?"
               </p>
@@ -1105,9 +1151,15 @@
         <div class="case-top-bar">
           <div class="section-tag mono"><span class="accent-dot danger"></span> RODADA 04 // O LAGO DO MICHAEL SCOTT</div>
           <div class="case-scoreboard-compact mono">
-            <span class="cs-team team-a">Lado A: <strong id="cScoreA4">0</strong> <button class="cs-add-btn" onclick="addTribunalScore('a', 1)">+1</button></span>
-            <span>|</span>
-            <span class="cs-team team-b">Lado B: <strong id="cScoreB4">0</strong> <button class="cs-add-btn" onclick="addTribunalScore('b', 1)">+1</button></span>
+            <span class="cs-group g2"><span class="cs-g-name">G2:</span> <strong id="cScore_c4_g2">0</strong> <button class="cs-add-btn" onclick="addTribunalScore(2, 1)" title="Ponto para Grupo 2">+1</button></span>
+            <span class="cs-sep">|</span>
+            <span class="cs-group g3"><span class="cs-g-name">G3:</span> <strong id="cScore_c4_g3">0</strong> <button class="cs-add-btn" onclick="addTribunalScore(3, 1)" title="Ponto para Grupo 3">+1</button></span>
+            <span class="cs-sep">|</span>
+            <span class="cs-group g4"><span class="cs-g-name">G4:</span> <strong id="cScore_c4_g4">0</strong> <button class="cs-add-btn" onclick="addTribunalScore(4, 1)" title="Ponto para Grupo 4">+1</button></span>
+            <span class="cs-sep">|</span>
+            <span class="cs-group g5"><span class="cs-g-name">G5:</span> <strong id="cScore_c4_g5">0</strong> <button class="cs-add-btn" onclick="addTribunalScore(5, 1)" title="Ponto para Grupo 5">+1</button></span>
+            <span class="cs-sep">|</span>
+            <span class="cs-group g6"><span class="cs-g-name">G6:</span> <strong id="cScore_c4_g6">0</strong> <button class="cs-add-btn" onclick="addTribunalScore(6, 1)" title="Ponto para Grupo 6">+1</button></span>
           </div>
         </div>
 
@@ -1130,7 +1182,7 @@
             </div>
 
             <div class="case-challenge-box">
-              <span class="challenge-badge mono">⚖️ O DESAFIO (VALENDO O PONTO FINAL):</span>
+              <span class="challenge-badge mono">⚖️ O DESAFIO (VALENDO PONTO):</span>
               <p class="challenge-question">
                 "O sistema calculou certo, mas entregou um resultado completamente inadequado para o mundo real. Qual característica afundou aqui?"
               </p>
@@ -1155,28 +1207,93 @@
     </section>
 
     <!-- ========================================== -->
-    <!-- SLIDE 17: TRIBUNAL - VEREDITO DAS BANCADAS -->
+    <!-- SLIDE 17: TRIBUNAL - RODADA 5 (INDEPENDENCE DAY) -->
     <!-- ========================================== -->
-    <section class="slide" data-slide="17" data-block="tribunal" id="slide-17" data-title="Tribunal: Veredito Final das Bancadas">
+    <section class="slide" data-slide="17" data-block="tribunal" id="slide-17" data-title="Tribunal: Rodada 5 - O Vírus do Independence Day">
+      <div class="slide-content">
+        <div class="case-top-bar">
+          <div class="section-tag mono"><span class="accent-dot danger"></span> RODADA 05 // O VÍRUS DO INDEPENDENCE DAY</div>
+          <div class="case-scoreboard-compact mono">
+            <span class="cs-group g2"><span class="cs-g-name">G2:</span> <strong id="cScore_c5_g2">0</strong> <button class="cs-add-btn" onclick="addTribunalScore(2, 1)" title="Ponto para Grupo 2">+1</button></span>
+            <span class="cs-sep">|</span>
+            <span class="cs-group g3"><span class="cs-g-name">G3:</span> <strong id="cScore_c5_g3">0</strong> <button class="cs-add-btn" onclick="addTribunalScore(3, 1)" title="Ponto para Grupo 3">+1</button></span>
+            <span class="cs-sep">|</span>
+            <span class="cs-group g4"><span class="cs-g-name">G4:</span> <strong id="cScore_c5_g4">0</strong> <button class="cs-add-btn" onclick="addTribunalScore(4, 1)" title="Ponto para Grupo 4">+1</button></span>
+            <span class="cs-sep">|</span>
+            <span class="cs-group g5"><span class="cs-g-name">G5:</span> <strong id="cScore_c5_g5">0</strong> <button class="cs-add-btn" onclick="addTribunalScore(5, 1)" title="Ponto para Grupo 5">+1</button></span>
+            <span class="cs-sep">|</span>
+            <span class="cs-group g6"><span class="cs-g-name">G6:</span> <strong id="cScore_c5_g6">0</strong> <button class="cs-add-btn" onclick="addTribunalScore(6, 1)" title="Ponto para Grupo 6">+1</button></span>
+          </div>
+        </div>
+
+        <div class="case-layout">
+          <div class="case-media-side">
+            <div class="case-media-wrap">
+              <img class="zoomable" src="assets/images/independence_day_virus.jpeg" alt="David Levinson conectando o PowerBook na Nave Mãe alienígena em Independence Day" title="Clique para ampliar">
+              <span class="case-stamp mono">PROVA MATERIAL 05 • IMAGEM</span>
+            </div>
+            <div class="case-media-caption mono">
+              Independence Day (1996) — David Levinson conecta o PowerBook 5300 (Mac OS) à Nave Mãe e faz upload do vírus.
+            </div>
+          </div>
+
+          <div class="case-content-side">
+            <div class="case-context-box">
+              <strong>O Contexto:</strong> Para salvar a Terra, o protagonista conecta o notebook Apple dele num painel da Nave Mãe alienígena. E por um milagre de Hollywood, o sistema operacional dos ETs reconhece o Mac OS, aceita o cabo e roda o vírus terráqueo perfeitamente, sem precisar instalar nenhum driver!
+            </div>
+
+            <div class="case-challenge-box">
+              <span class="challenge-badge mono">⚖️ O DESAFIO (VALENDO O ÚLTIMO PONTO):</span>
+              <p class="challenge-question">
+                "Se um código feito num Mac de 1996 roda nativamente num servidor alienígena construído do outro lado da galáxia... Os ETs têm nota 10 em qual característica?"
+              </p>
+            </div>
+
+            <button class="case-reveal-btn" id="btnRevealCase5" onclick="revealVerdict(5)">
+              <span>⚖️ Revelar Veredito da ISO 9126</span>
+            </button>
+
+            <div class="case-verdict-card" id="verdictCard5">
+              <div class="verdict-header">
+                <span class="verdict-tag mono">// VEREDITO DO TRIBUNAL</span>
+                <span class="verdict-answer">Portabilidade!</span>
+              </div>
+              <p class="verdict-text">
+                <strong>Isso! Interoperabilidade, Adaptabilidade e Capacidade de Instalação nota 10.</strong> A Portabilidade mede a facilidade de transferir o software para outro ambiente. Aqui, um vírus feito na Terra roda direto num sistema alienígena, sem adaptação nem instalação de drivers: portabilidade absoluta (e puro cinema!).
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SLIDE 18: TRIBUNAL - VEREDITO DAS BANCADAS -->
+    <!-- ========================================== -->
+    <section class="slide" data-slide="18" data-block="tribunal" id="slide-18" data-title="Tribunal: Veredito Final das Bancadas">
       <div class="slide-content">
         <div class="slide-top-header text-center">
           <div class="section-tag mono"><span class="accent-dot"></span> ENCERRAMENTO DO JULGAMENTO</div>
-          <h2 class="slide-heading">Veredito Final: <span class="gradient-text">A Bancada Campeã</span></h2>
+          <h2 class="slide-heading">Veredito Final: <span class="gradient-text">O Grupo Campeão</span></h2>
           <p class="slide-lead max-w-lead">
-            Parabéns aos engenheiros de software de ambas as bancadas! O julgamento dos 4 casos consolida o domínio prático dos pilares da ISO/IEC 9126.
+            Parabéns aos engenheiros de software dos 5 grupos! O julgamento dos 5 casos consolida o domínio prático dos pilares da ISO/IEC 9126.
           </p>
         </div>
 
         <div class="tribunal-final-grid">
-          <!-- Card do Campeão Calculado -->
+          <!-- Card do Campeão Calculado e Leaderboard dos 5 Grupos -->
           <div class="winner-bench-card" id="tribunalWinnerCard">
             <div class="wb-icon" id="wbIcon">🏆</div>
-            <div class="wb-title" id="wbTitle">Lado A Campeão!</div>
-            <div class="wb-score-display mono" id="wbScoreDisplay">Lado A: 0 pts × Lado B: 0 pts</div>
-            <p style="font-size: 0.95rem; color: var(--nord4); margin-bottom: 1.25rem;">
-              Excelente precisão diagnóstica em Confiabilidade, Usabilidade, Eficiência e Funcionalidade!
-            </p>
-            <button class="poll-button-reset" onclick="resetTribunalScore()" style="padding: 0.4rem 0.9rem;">↺ Zerar Placar</button>
+            <div class="wb-title" id="wbTitle">Grupo Campeão!</div>
+            <div class="wb-sub-lead" id="wbSubLead" style="font-size: 0.92rem; color: var(--nord4); margin-bottom: 0.8rem;">
+              Classificação geral dos 5 grupos (Grupo 2 ao 6) nas 5 rodadas:
+            </div>
+
+            <div class="tribunal-leaderboard mono" id="tribunalLeaderboard">
+              <!-- Renderizado dinamicamente via JavaScript -->
+            </div>
+
+            <button class="poll-button-reset" onclick="resetTribunalScore()" style="padding: 0.45rem 1rem; margin-top: 0.4rem;">↺ Zerar Placar do Tribunal</button>
           </div>
 
           <!-- Transição para o Bloco 3 -->
@@ -1188,7 +1305,7 @@
             <p style="font-size: 0.95rem; color: var(--nord4); margin: 0; line-height: 1.45;">
               Entramos agora no <strong>Bloco 3</strong>: análise estática no código-fonte (Parte 3), testes dinâmicos de carga (Parte 2) e métricas de satisfação (Parte 4).
             </p>
-            <button class="teaser-btn" onclick="goToSlide(18)" style="margin-top: 0.5rem; padding: 0.65rem 1.4rem; font-size: 0.95rem;">
+            <button class="teaser-btn" onclick="goToSlide(19)" style="margin-top: 0.5rem; padding: 0.65rem 1.4rem; font-size: 0.95rem;">
               <span>Iniciar Bloco 3: As Métricas</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-inline">
                 <polyline points="9 18 15 12 9 6"></polyline>
@@ -1201,7 +1318,7 @@
     <!-- ========================================== -->
     <!-- SLIDE 3.1: PROCESSO & VISÃO GERAL MÉTRICAS -->
     <!-- ========================================== -->
-    <section class="slide" data-slide="18" data-block="3" id="slide-18" data-title="3.1: O Processo de Avaliação &amp; Visão Geral das Métricas">
+    <section class="slide" data-slide="19" data-block="3" id="slide-19" data-title="3.1: O Processo de Avaliação &amp; Visão Geral das Métricas">
       <div class="slide-content eval-integrated-layout">
         <div class="slide-top-header">
           <div class="section-tag mono"><span class="accent-dot"></span> 03.1 // AVALIAÇÃO &amp; MÉTRICAS</div>
@@ -1258,7 +1375,7 @@
     <!-- ========================================== -->
     <!-- SLIDE 3.2: MÉTRICAS INTERNAS (PARTE 3)     -->
     <!-- ========================================== -->
-    <section class="slide" data-slide="19" data-block="3" id="slide-19" data-title="3.2: Métricas Internas (Parte 3)">
+    <section class="slide" data-slide="20" data-block="3" id="slide-20" data-title="3.2: Métricas Internas (Parte 3)">
       <div class="slide-content">
         <div class="split-layout">
           <div class="slide-text-side">
@@ -1301,7 +1418,7 @@
     <!-- ========================================== -->
     <!-- SLIDE 3.3: MÉTRICAS EXTERNAS (PARTE 2)     -->
     <!-- ========================================== -->
-    <section class="slide" data-slide="20" data-block="3" id="slide-20" data-title="3.3: Métricas Externas (Parte 2)">
+    <section class="slide" data-slide="21" data-block="3" id="slide-21" data-title="3.3: Métricas Externas (Parte 2)">
       <div class="slide-content">
         <div class="split-layout">
           <div class="slide-text-side">
@@ -1330,7 +1447,7 @@
     <!-- ========================================== -->
     <!-- SLIDE 3.4: QUALIDADE EM USO (PARTE 4)      -->
     <!-- ========================================== -->
-    <section class="slide" data-slide="21" data-block="3" id="slide-21" data-title="3.4: Qualidade em Uso (Parte 4)">
+    <section class="slide" data-slide="22" data-block="3" id="slide-22" data-title="3.4: Qualidade em Uso (Parte 4)">
       <div class="slide-content">
         <div class="slide-top-header">
           <div class="section-tag mono"><span class="accent-dot"></span> 03.4 // QUALIDADE EM USO • ISO/IEC 9126-4</div>
@@ -1368,7 +1485,7 @@
     <!-- ========================================== -->
     <!-- SLIDE 4.1: O QUE É O SONARQUBE?            -->
     <!-- ========================================== -->
-    <section class="slide" data-slide="22" data-block="4" id="slide-22" data-title="4.1: O que é o SonarQube?">
+    <section class="slide" data-slide="23" data-block="4" id="slide-23" data-title="4.1: O que é o SonarQube?">
       <div class="slide-content">
         <div class="slide-top-header">
           <div class="section-tag mono"><span class="accent-dot"></span> 04.1 // O QUE É O SONARQUBE?</div>
@@ -1435,7 +1552,7 @@
     <!-- ========================================== -->
     <!-- SLIDE 4.2: SONARQUBE                       -->
     <!-- ========================================== -->
-    <section class="slide" data-slide="23" data-block="4" id="slide-23" data-title="4.2: SonarQube (Relatório Executivo &amp; Análise Estática)">
+    <section class="slide" data-slide="24" data-block="4" id="slide-24" data-title="4.2: SonarQube (Relatório Executivo &amp; Análise Estática)">
       <div class="slide-content tool-layout">
         <div class="tool-shot shot-portrait">
           <div class="tool-window">
@@ -1464,7 +1581,7 @@
     <!-- ========================================== -->
     <!-- SLIDE 4.2: PRÁTICA: SONARQUBE AO VIVO      -->
     <!-- ========================================== -->
-    <section class="slide" data-slide="24" data-block="4" id="slide-24" data-title="4.3: PRÁTICA: SonarQube ao vivo">
+    <section class="slide" data-slide="25" data-block="4" id="slide-25" data-title="4.3: PRÁTICA: SonarQube ao vivo">
       <div class="slide-content practice-layout">
         <div class="practice-glow"></div>
         <span class="practice-tag mono"><span class="prompt-sym">&gt;</span> sonar-scanner --live-demo<span class="blink">_</span></span>
@@ -1477,7 +1594,7 @@
     <!-- ========================================== -->
     <!-- SLIDE 4.3: TESTLINK                        -->
     <!-- ========================================== -->
-    <section class="slide" data-slide="25" data-block="4" id="slide-25" data-title="4.4: TestLink (Gestão e Execução de Testes)">
+    <section class="slide" data-slide="26" data-block="4" id="slide-26" data-title="4.4: TestLink (Gestão e Execução de Testes)">
       <div class="slide-content tool-layout wide">
         <div class="tool-info">
           <div class="section-tag mono"><span class="accent-dot"></span> 04.4 // TESTLINK • MÉTRICAS EXTERNAS</div>
@@ -1511,7 +1628,7 @@
     <!-- ========================================== -->
     <!-- SLIDE 4.3: CHECKLIST INTERATIVO            -->
     <!-- ========================================== -->
-    <section class="slide" data-slide="26" data-block="4" id="slide-26" data-title="4.5: Checklist Interativo de Qualidade em Uso">
+    <section class="slide" data-slide="27" data-block="4" id="slide-27" data-title="4.5: Checklist Interativo de Qualidade em Uso">
       <div class="slide-content">
         <div class="slide-top-header">
           <div class="section-tag mono"><span class="accent-dot"></span> 04.5 // CHECKLIST • QUALIDADE EM USO • INTERATIVO</div>
@@ -1558,7 +1675,7 @@
     <!-- ========================================== -->
     <!-- SLIDE 5.1: A BATALHA (CHROME VS FIREFOX)   -->
     <!-- ========================================== -->
-    <section class="slide" data-slide="27" data-block="5" id="slide-27" data-title="5.1: A Batalha (Chrome vs. Firefox)">
+    <section class="slide" data-slide="28" data-block="5" id="slide-28" data-title="5.1: A Batalha (Chrome vs. Firefox)">
       <div class="slide-content">
         <div class="slide-top-header">
           <div class="section-tag mono"><span class="accent-dot danger"></span> 05.1 // A BATALHA DOS NAVEGADORES</div>
@@ -1587,7 +1704,7 @@
     <!-- ========================================== -->
     <!-- SLIDE 5.2: VOTAÇÃO INTERATIVA (MENTIMETER) -->
     <!-- ========================================== -->
-    <section class="slide" data-slide="28" data-block="5" id="slide-28" data-title="5.2: Votação Interativa da Turma">
+    <section class="slide" data-slide="29" data-block="5" id="slide-29" data-title="5.2: Votação Interativa da Turma">
       <div class="slide-content">
         <div class="split-layout vote-split">
           <div class="slide-text-side">
@@ -1595,13 +1712,15 @@
             <h2 class="slide-heading slim">Agora é com <span class="gradient-text">vocês!</span></h2>
             <p class="slide-lead tight">Escaneiem o QR Code e atribuam notas de <strong>0 a 10</strong> para cada navegador nos critérios da norma.</p>
             <div class="qr-box">
-              <div class="qr-grid" id="qrGrid" aria-label="QR Code ilustrativo"></div>
+              <div class="qr-img-wrapper" title="Clique para ampliar o QR Code">
+                <img src="assets/images/mentimeter_qr_code.png" alt="QR Code Mentimeter - Código 3561 5228" class="qr-image zoomable">
+              </div>
               <div class="qr-info">
-                <span class="mono qr-label">ENTRE EM</span>
-                <span class="qr-url mono">menti.com</span>
-                <span class="mono qr-label">COM O CÓDIGO</span>
-                <input class="chk-input mono qr-code" value="0000 0000" aria-label="Código do Mentimeter">
-                <span class="qr-note mono">QR ilustrativo: insira o código real do seu Mentimeter</span>
+                <span class="mono qr-label">ACESSO RÁPIDO</span>
+                <a href="https://www.menti.com" target="_blank" rel="noopener" class="qr-url mono">menti.com</a>
+                <span class="mono qr-label">CÓDIGO DA SALA</span>
+                <div class="qr-code-badge mono" title="Código da sala no Mentimeter">3561 5228</div>
+                <span class="qr-note mono">Aponte a câmera do celular ou acesse pelo navegador</span>
               </div>
             </div>
           </div>
@@ -1645,7 +1764,7 @@
     <!-- ========================================== -->
     <!-- SLIDE 5.3: CONCLUSÃO & VEREDITO FINAL      -->
     <!-- ========================================== -->
-    <section class="slide" data-slide="29" data-block="5" id="slide-29" data-title="5.3: Conclusão e Veredito Final">
+    <section class="slide" data-slide="30" data-block="5" id="slide-30" data-title="5.3: Conclusão e Veredito Final">
       <div class="slide-content">
         <div class="slide-top-header">
           <div class="section-tag mono"><span class="accent-dot"></span> 05.3 // CONCLUSÃO &amp; ENCERRAMENTO</div>
@@ -1667,14 +1786,14 @@
         </div>
         <div class="next-block-teaser">
           <div class="teaser-left"><span class="teaser-badge mono">ETAPA FINAL</span><span class="teaser-title">Sessão aberta de dúvidas e debate com a sala</span></div>
-          <button class="teaser-btn" onclick="goToSlide(30)"><span>Abrir Perguntas (Q&amp;A)</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-inline"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
+          <button class="teaser-btn" onclick="goToSlide(31)"><span>Abrir Perguntas (Q&amp;A)</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-inline"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
         </div>
       </div>
     </section>
     <!-- ========================================== -->
     <!-- SLIDE 5.4: DÚVIDAS & PERGUNTAS (Q&A)       -->
     <!-- ========================================== -->
-    <section class="slide" data-slide="30" data-block="5" id="slide-30" data-title="5.4: Dúvidas e Perguntas (Q&amp;A)">
+    <section class="slide" data-slide="31" data-block="5" id="slide-31" data-title="5.4: Dúvidas e Perguntas (Q&amp;A)">
       <div class="slide-content">
         <div class="qa-top">
           <div>
@@ -1767,6 +1886,7 @@
       <button class="dot-btn" data-goto="28" title="Slide 28"></button>
       <button class="dot-btn" data-goto="29" title="Slide 29"></button>
       <button class="dot-btn" data-goto="30" title="Slide 30"></button>
+      <button class="dot-btn" data-goto="31" title="Slide 31"></button>
     </div>
 
     <div class="footer-right">
